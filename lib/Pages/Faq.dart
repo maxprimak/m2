@@ -13,7 +13,9 @@ class Faq extends StatelessWidget {
             color: Colors.black,
           ),
           backgroundColor: Colors.white,
-          onPressed: () {}),
+          onPressed: () {
+            Navigator.pushNamed(context, '/menu');
+          }),
       body: SafeArea(
           child: ListView(
         children: <Widget>[

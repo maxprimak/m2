@@ -20,8 +20,7 @@ class _HomeState extends State<Home> {
             ),
             backgroundColor: Colors.white,
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => MenuPage()));
+              Navigator.pushNamed(context, '/menu');
             }),
         body: ListView(
           padding: const EdgeInsets.all(8),
