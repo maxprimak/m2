@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:m2/Pages/LVs/lv_site.dart';
+import 'package:m2/Pages/menu.dart';
 import 'package:m2/Services/user_profile.dart';
 
 class Home extends StatefulWidget {
@@ -18,7 +19,9 @@ class _HomeState extends State<Home> {
               color: Colors.black,
             ),
             backgroundColor: Colors.white,
-            onPressed: () {}),
+            onPressed: () {
+              Navigator.pushNamed(context, '/menu');
+            }),
         body: ListView(
           padding: const EdgeInsets.all(8),
           scrollDirection: Axis.vertical,
