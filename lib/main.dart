@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 //import all of your site files here
+import 'Pages/add_review.dart';
 import 'Pages/home.dart';
 import 'Pages/LVs/lv_site.dart';
 import 'Pages/Faq.dart';
@@ -18,5 +19,6 @@ void main() => runApp(MaterialApp(
         '/login': (context) => Login(),
         '/profile': (context) => Profile(),
         '/settings': (context) => Settings(),
+        '/addreview': (context) => AddReview(),
       },
     )); //App starter
