@@ -9,15 +9,22 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
 
   // Style
-  final _listFont = TextStyle(fontSize: 18.0);
-  final _welcomeFont = TextStyle(
-    fontSize: 28.0,
-    fontWeight: FontWeight.bold,
-  );
+  final _listFont = TextStyle(fontSize: 18.0, fontFamily: 'Montserrat');
+  final _titleFont = TextStyle(
+      fontSize: 28.0, fontWeight: FontWeight.bold, fontFamily: 'Montserrat');
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          child: Icon(
+            Icons.close,
+            color: Colors.black,
+          ),
+          backgroundColor: Colors.white,
+          onPressed: () {
+            Navigator.pop(context);
+          }),
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,7 +33,7 @@ class _MenuPageState extends State<MenuPage> {
               padding: const EdgeInsets.all(10.0),
               child: Text(
                 " Menu",
-                style: _welcomeFont,
+                style: _titleFont,
               ),
             ),
             Expanded(
@@ -40,32 +47,30 @@ class _MenuPageState extends State<MenuPage> {
 
   Widget _buildMenuList() {
     return ListView(
-        padding: EdgeInsets.all(8.0),
-        children: [
-          _buildRow('Home Page', '/home'),
-          Divider(),
-          _buildRow('Profile', '/profile'),
-          Divider(),
-          _buildRow('FAQ', '/faq'),
-          Divider(),
-          _buildRow('Settings', '/settings'),
-          Divider(),
-          _buildRow('Logout', '/login'),
-          Divider(),
-        ],
-        );
+      padding: EdgeInsets.all(8.0),
+      children: [
+        _buildRow('Home Page', '/home'),
+        Divider(),
+        _buildRow('Profile', '/profile'),
+        Divider(),
+        _buildRow('FAQ', '/faq'),
+        Divider(),
+        _buildRow('Settings', '/settings'),
+        Divider(),
+        _buildRow('Logout', '/login'),
+        Divider(),
+      ],
+    );
   }
 
-  Widget _buildRow(String pageName, String pageLink ) {
+  Widget _buildRow(String pageName, String pageLink) {
     return ListTile(
         title: Text(
           pageName,
           style: _listFont,
         ),
         onTap: () {
-          Navigator.pushNamed(
-              context,
-              pageLink);
+          Navigator.pushNamed(context, pageLink);
         });
   }
 }
