@@ -20,7 +20,7 @@ class _MenuPageState extends State<MenuPage> {
     return Scaffold(
       body: Container(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(10.0),

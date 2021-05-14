@@ -5,6 +5,7 @@ import 'Pages/home.dart';
 import 'Pages/LVs/lv_site.dart';
 import 'Pages/Faq.dart';
 import 'Pages/login.dart';
+import 'Pages/menu.dart';
 import 'Pages/profile.dart';
 import 'Pages/settings.dart';
 
@@ -18,5 +19,6 @@ void main() => runApp(MaterialApp(
         '/login': (context) => Login(),
         '/profile': (context) => Profile(),
         '/settings': (context) => Settings(),
+        '/menu': (context) => MenuPage()
       },
     )); //App starter
