@@ -97,7 +97,9 @@ class Lv_profile extends StatelessWidget {
                       style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
                     ),
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/addreview');
+                        },
                         style: ElevatedButton.styleFrom(primary: Colors.white),
                         child: Text("Add review",
                             style: TextStyle(
