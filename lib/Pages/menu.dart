@@ -7,7 +7,6 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-
   // Style
   final _listFont = TextStyle(fontSize: 18.0, fontFamily: 'Montserrat');
   final _titleFont = TextStyle(
@@ -29,12 +28,15 @@ class _MenuPageState extends State<MenuPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            SizedBox(
+              height: 40,
+            ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text(
-                " Menu",
-                style: _titleFont,
-              ),
+              padding: const EdgeInsets.all(20.0),
+              child: Text("Menu", style: _titleFont),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Expanded(
               child: _buildMenuList(),
@@ -65,9 +67,8 @@ class _MenuPageState extends State<MenuPage> {
 
   Widget _buildRow(String pageName, String pageLink) {
     return ListTile(
-        title: Text(
-          pageName,
-          style: _listFont,
+        title: new Center(
+            child: Text(pageName, style: _listFont)
         ),
         onTap: () {
           Navigator.pushNamed(context, pageLink);
