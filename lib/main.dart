@@ -5,6 +5,8 @@ import 'Pages/home.dart';
 import 'Pages/LVs/lv_site.dart';
 import 'Pages/Faq.dart';
 import 'Pages/login.dart';
+import 'Pages/profile.dart';
+import 'Pages/settings.dart';
 
 //in this formate import your Site widgets
 void main() => runApp(MaterialApp(
@@ -14,5 +16,7 @@ void main() => runApp(MaterialApp(
         '/lv': (context) => Lv_profile(),
         '/faq': (context) => Faq(),
         '/login': (context) => Login(),
+        '/profile': (context) => Profile(),
+        '/settings': (context) => Settings(),
       },
     )); //App starter
