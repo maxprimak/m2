@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                       ),
                       Icon(
                         Icons.favorite,
-                        color: Colors.yellow,
+                        color: Colors.red,
                       )
                     ])
                   ],
@@ -137,7 +137,7 @@ class _HomeState extends State<Home> {
                       ),
                       Icon(
                         Icons.favorite,
-                        color: Colors.yellow,
+                        color: Colors.red,
                       )
                     ])
                   ],

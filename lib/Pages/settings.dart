@@ -25,10 +25,12 @@ class _SettingsState extends State<Settings> {
   final optionNotificationReviewDeletedName = "Review deleted";
   final optionSoundOnName = "Sound";
   final optionPublicOnName = "Public";
-  final TextStyle _listHeaderTextStyle =
-      TextStyle(fontFamily: 'Montserrato', fontSize: 35);
+  final TextStyle _listHeaderTextStyle = TextStyle(
+      fontFamily: 'Montserrat', fontSize: 35, fontWeight: FontWeight.bold);
+  final TextStyle _listSettingTextStyle =
+      TextStyle(fontFamily: 'Montserrat', fontSize: 25);
   final TextStyle _listTileTextStyle =
-      TextStyle(fontFamily: 'Montserrato', fontSize: 20);
+      TextStyle(fontFamily: 'Montserrat', fontSize: 20);
 
   @override
   Widget build(BuildContext context) {
@@ -67,16 +69,16 @@ class _SettingsState extends State<Settings> {
             ),
           ),
           Container(
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.all(20),
               child: Text(
                 "Settings",
                 style: _listHeaderTextStyle,
               )),
           Container(
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.all(20),
               child: Text(
                 "Notifications",
-                style: _listHeaderTextStyle,
+                style: _listSettingTextStyle,
               )),
           SwitchListTile(
             title: Text(
@@ -130,7 +132,7 @@ class _SettingsState extends State<Settings> {
               padding: EdgeInsets.all(30),
               child: Text(
                 "Other",
-                style: _listHeaderTextStyle,
+                style: _listSettingTextStyle,
               )),
           SwitchListTile(
             title: Text(

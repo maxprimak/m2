@@ -20,6 +20,16 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       body: ListView(children: <Widget>[
         _getHeader(),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+          child: Container(
+            color: Colors.grey[400],
+            height: 1,
+          ),
+        ),
         Center(
           child: Column(
             children: [
@@ -30,7 +40,7 @@ class _ProfileState extends State<Profile> {
                   children: [
                     Text(
                       "Profile",
-                      style: TextStyle(fontFamily: 'Montserrato', fontSize: 35),
+                      style: TextStyle(fontFamily: 'Montserrat', fontSize: 35),
                     )
                   ],
                 ),
@@ -47,13 +57,13 @@ class _ProfileState extends State<Profile> {
                   padding: EdgeInsets.only(top: 10),
                   child: Text(
                     "${_user.name} ${_user.lastname}",
-                    style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
+                    style: TextStyle(fontFamily: 'Montserrat', fontSize: 20),
                   )),
               Container(
                   padding: EdgeInsets.all(10),
                   child: Text("#Student",
                       style: TextStyle(
-                          fontFamily: 'Montserrato',
+                          fontFamily: 'Montserrat',
                           fontSize: 15,
                           color: Colors.grey))),
               Padding(
@@ -151,9 +161,6 @@ class _ProfileState extends State<Profile> {
             "Feedbacksy",
             style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
           ),
-          CircleAvatar(
-            backgroundImage: NetworkImage(_user.ppicture),
-          )
         ],
       ),
     );

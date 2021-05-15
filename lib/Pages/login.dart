@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:m2/Pages/home.dart';
+import 'package:m2/Services/user_profile.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -7,6 +8,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  static final _user = User(name: 'Peter');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +50,8 @@ class _LoginState extends State<Login> {
           ),
           Padding(
             padding: EdgeInsets.all(10),
-            child: TextField(
+            child: TextFormField(
+              initialValue: '${_user.email}',
               decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'User Name',
@@ -57,8 +60,9 @@ class _LoginState extends State<Login> {
           ),
           Padding(
             padding: EdgeInsets.all(10),
-            child: TextField(
+            child: TextFormField(
               obscureText: true,
+              initialValue: '${_user.password}',
               decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Password',

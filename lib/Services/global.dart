@@ -39,7 +39,7 @@ List<Review> templist = [r1, r2, r3, r4];
 Lv algo = Lv(
     lv_id: 666,
     name: "Algorithmen und Datenstrukturen 1",
-    profesors: "H. Wanek, E. Schikuta",
+    profesors: "A. Dumbledore, M. McGonagallov",
     avgmark: 4.3,
     difficulty: 5,
     techteam: 2,

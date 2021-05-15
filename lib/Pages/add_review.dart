@@ -161,7 +161,10 @@ class _AddReviewState extends State<AddReview> {
               style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
             ),
           ),
-          Icon(Icons.favorite)
+          Icon(
+            Icons.favorite,
+            color: Colors.red,
+          )
         ],
       ),
     );

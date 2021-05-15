@@ -63,7 +63,10 @@ class Lv_profile extends StatelessWidget {
                     style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
                   ),
                 ),
-                Icon(Icons.favorite)
+                Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                )
               ],
             ),
           ),
