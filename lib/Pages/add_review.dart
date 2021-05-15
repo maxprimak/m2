@@ -125,8 +125,13 @@ class _AddReviewState extends State<AddReview> {
             "Feedbacksy",
             style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
           ),
-          CircleAvatar(
-            backgroundImage: NetworkImage(usertmp.ppicture),
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/profile');
+            },
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(usertmp.ppicture),
+            ),
           )
         ],
       ),

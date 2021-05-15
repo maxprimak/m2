@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:m2/Services/user_profile.dart';
+import './../Services/user_profile.dart';
 
 class Settings extends StatefulWidget {
   Settings({Key key}) : super(key: key);
@@ -32,120 +33,131 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Feedbacksy',
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: CircleAvatar(
-              backgroundImage: NetworkImage(_user.ppicture),
+        body: SafeArea(
+      child: ListView(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "Feedbacksy",
+                  style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/profile');
+                  },
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(_user.ppicture),
+                  ),
+                ),
+              ],
             ),
-          )
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            child: Container(
+              color: Colors.grey[400],
+              height: 1,
+            ),
+          ),
+          Container(
+              padding: EdgeInsets.all(30),
+              child: Text(
+                "Settings",
+                style: _listHeaderTextStyle,
+              )),
+          Container(
+              padding: EdgeInsets.all(30),
+              child: Text(
+                "Notifications",
+                style: _listHeaderTextStyle,
+              )),
+          SwitchListTile(
+            title: Text(
+              optionNotificationNewReviewName,
+              style: _listTileTextStyle,
+            ),
+            value: optionNotificationNewReview,
+            onChanged: (bool value) {
+              setState(() {
+                optionNotificationNewReview = value;
+              });
+            },
+          ),
+          SwitchListTile(
+            title: Text(
+              optionNotificationNewCommentName,
+              style: _listTileTextStyle,
+            ),
+            value: optionNotificationNewComment,
+            onChanged: (bool value) {
+              setState(() {
+                optionNotificationNewComment = value;
+              });
+            },
+          ),
+          SwitchListTile(
+            title: Text(
+              optionNotificationReviewViewedName,
+              style: _listTileTextStyle,
+            ),
+            value: optionNotificationReviewViewed,
+            onChanged: (bool value) {
+              setState(() {
+                optionNotificationReviewViewed = value;
+              });
+            },
+          ),
+          SwitchListTile(
+            title: Text(
+              optionNotificationReviewDeletedName,
+              style: _listTileTextStyle,
+            ),
+            value: optionNotificationReviewDeleted,
+            onChanged: (bool value) {
+              setState(() {
+                optionNotificationReviewDeleted = value;
+              });
+            },
+          ),
+          Container(
+              padding: EdgeInsets.all(30),
+              child: Text(
+                "Other",
+                style: _listHeaderTextStyle,
+              )),
+          SwitchListTile(
+            title: Text(
+              optionSoundOnName,
+              style: _listTileTextStyle,
+            ),
+            value: optionSoundOn,
+            onChanged: (bool value) {
+              setState(() {
+                optionSoundOn = value;
+              });
+            },
+          ),
+          SwitchListTile(
+            title: Text(
+              optionPublicOnName,
+              style: _listTileTextStyle,
+            ),
+            value: optionPublicOn,
+            onChanged: (bool value) {
+              setState(() {
+                optionPublicOn = value;
+              });
+            },
+          ),
         ],
       ),
-      body: Align(
-          alignment: Alignment.centerLeft,
-          child: Column(
-            children: [
-              Container(
-                  padding: EdgeInsets.all(30),
-                  child: Text(
-                    "Settings",
-                    style: _listHeaderTextStyle,
-                  )),
-              Expanded(
-                  child: ListView(
-                children: [
-                  Container(
-                      padding: EdgeInsets.all(30),
-                      child: Text(
-                        "Notifications",
-                        style: _listHeaderTextStyle,
-                      )),
-                  SwitchListTile(
-                    title: Text(
-                      optionNotificationNewReviewName,
-                      style: _listTileTextStyle,
-                    ),
-                    value: optionNotificationNewReview,
-                    onChanged: (bool value) {
-                      setState(() {
-                        optionNotificationNewReview = value;
-                      });
-                    },
-                  ),
-                  SwitchListTile(
-                    title: Text(
-                      optionNotificationNewCommentName,
-                      style: _listTileTextStyle,
-                    ),
-                    value: optionNotificationNewComment,
-                    onChanged: (bool value) {
-                      setState(() {
-                        optionNotificationNewComment = value;
-                      });
-                    },
-                  ),
-                  SwitchListTile(
-                    title: Text(
-                      optionNotificationReviewViewedName,
-                      style: _listTileTextStyle,
-                    ),
-                    value: optionNotificationReviewViewed,
-                    onChanged: (bool value) {
-                      setState(() {
-                        optionNotificationReviewViewed = value;
-                      });
-                    },
-                  ),
-                  SwitchListTile(
-                    title: Text(
-                      optionNotificationReviewDeletedName,
-                      style: _listTileTextStyle,
-                    ),
-                    value: optionNotificationReviewDeleted,
-                    onChanged: (bool value) {
-                      setState(() {
-                        optionNotificationReviewDeleted = value;
-                      });
-                    },
-                  ),
-                  Container(
-                      padding: EdgeInsets.all(30),
-                      child: Text(
-                        "Other",
-                        style: _listHeaderTextStyle,
-                      )),
-                  SwitchListTile(
-                    title: Text(
-                      optionSoundOnName,
-                      style: _listTileTextStyle,
-                    ),
-                    value: optionSoundOn,
-                    onChanged: (bool value) {
-                      setState(() {
-                        optionSoundOn = value;
-                      });
-                    },
-                  ),
-                  SwitchListTile(
-                    title: Text(
-                      optionPublicOnName,
-                      style: _listTileTextStyle,
-                    ),
-                    value: optionPublicOn,
-                    onChanged: (bool value) {
-                      setState(() {
-                        optionPublicOn = value;
-                      });
-                    },
-                  ),
-                ],
-              ))
-            ],
-          )),
-    );
+    ));
   }
 }
