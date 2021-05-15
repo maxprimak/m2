@@ -14,7 +14,7 @@ import 'Pages/settings.dart';
 void main() => runApp(MaterialApp(
       initialRoute: '/login',
       routes: {
-        '/home': (context) => Home(), // !!!!!!! the home should be the LVliste?
+        '/home': (context) => Home(),
         '/lv': (context) => Lv_profile(),
         '/faq': (context) => Faq(),
         '/login': (context) => Login(),

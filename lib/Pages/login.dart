@@ -89,8 +89,7 @@ class _LoginState extends State<Login> {
           ),
           FlatButton(
             onPressed: () {
-              Navigator.pushReplacementNamed(context,
-                  '/home'); //, MaterialPageRoute(builder: (_) => Home())
+              Navigator.pushReplacementNamed(context, '/home');
             },
             child: Text(
               'Forgot Password',

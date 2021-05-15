@@ -9,6 +9,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Color _favIconColorADS = Colors.grey;
+  Color _favIconColorDB = Colors.grey;
+  Color _favIconColorPR1 = Colors.grey;
+  Color _favIconColorIn = Colors.grey;
+  Color _favIconColorBus = Colors.grey;
+
   @override
   Widget build(BuildContext context) {
     User usertmp = User(name: "Peter");
@@ -95,14 +101,25 @@ class _HomeState extends State<Home> {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.favorite,
-                        color: Colors.red,
-                      )
+                      IconButton(
+                          icon: Icon(Icons.favorite),
+                          color: _favIconColorADS,
+                          onPressed: () {
+                            setState(() {
+                              if (_favIconColorADS == Colors.grey) {
+                                _favIconColorADS = Colors.red;
+                              } else {
+                                _favIconColorADS = Colors.grey;
+                              }
+                            });
+                          })
                     ])
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             RaisedButton(
               onPressed: () {
@@ -135,14 +152,25 @@ class _HomeState extends State<Home> {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.favorite,
-                        color: Colors.red,
-                      )
+                      IconButton(
+                          icon: Icon(Icons.favorite),
+                          color: _favIconColorDB,
+                          onPressed: () {
+                            setState(() {
+                              if (_favIconColorDB == Colors.grey) {
+                                _favIconColorDB = Colors.red;
+                              } else {
+                                _favIconColorDB = Colors.grey;
+                              }
+                            });
+                          })
                     ])
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             RaisedButton(
               onPressed: () {
@@ -175,14 +203,25 @@ class _HomeState extends State<Home> {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.favorite,
-                        color: Colors.grey,
-                      )
+                      IconButton(
+                          icon: Icon(Icons.favorite),
+                          color: _favIconColorPR1,
+                          onPressed: () {
+                            setState(() {
+                              if (_favIconColorPR1 == Colors.grey) {
+                                _favIconColorPR1 = Colors.red;
+                              } else {
+                                _favIconColorPR1 = Colors.grey;
+                              }
+                            });
+                          })
                     ])
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             RaisedButton(
               onPressed: () {
@@ -215,14 +254,25 @@ class _HomeState extends State<Home> {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.favorite,
-                        color: Colors.grey,
-                      )
+                      IconButton(
+                          icon: Icon(Icons.favorite),
+                          color: _favIconColorIn,
+                          onPressed: () {
+                            setState(() {
+                              if (_favIconColorIn == Colors.grey) {
+                                _favIconColorIn = Colors.red;
+                              } else {
+                                _favIconColorIn = Colors.grey;
+                              }
+                            });
+                          })
                     ])
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             RaisedButton(
               onPressed: () {
@@ -255,14 +305,25 @@ class _HomeState extends State<Home> {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.favorite,
-                        color: Colors.grey,
-                      )
+                      IconButton(
+                          icon: Icon(Icons.favorite),
+                          color: _favIconColorBus,
+                          onPressed: () {
+                            setState(() {
+                              if (_favIconColorBus == Colors.grey) {
+                                _favIconColorBus = Colors.red;
+                              } else {
+                                _favIconColorBus = Colors.grey;
+                              }
+                            });
+                          })
                     ])
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(10, 20, 10, 10),

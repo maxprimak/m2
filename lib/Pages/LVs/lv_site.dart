@@ -5,8 +5,16 @@ import '../../Services/user_profile.dart';
 import '../../Services/lv.dart';
 import '../../Services/global.dart' as global;
 
-class Lv_profile extends StatelessWidget {
+class Lv_profile extends StatefulWidget {
+  @override
+  _Lv_profileState createState() => _Lv_profileState();
+}
+
+class _Lv_profileState extends State<Lv_profile> {
   User usertmp = User(name: "Peter");
+
+  Color _favIconColor = Colors.grey;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,10 +71,18 @@ class Lv_profile extends StatelessWidget {
                     style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
                   ),
                 ),
-                Icon(
-                  Icons.favorite,
-                  color: Colors.red,
-                )
+                IconButton(
+                    icon: Icon(Icons.favorite),
+                    color: _favIconColor,
+                    onPressed: () {
+                      setState(() {
+                        if (_favIconColor == Colors.grey) {
+                          _favIconColor = Colors.red;
+                        } else {
+                          _favIconColor = Colors.grey;
+                        }
+                      });
+                    })
               ],
             ),
           ),
