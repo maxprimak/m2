@@ -37,8 +37,13 @@ class _HomeState extends State<Home> {
                       "Feedbacksy",
                       style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
                     ),
-                    CircleAvatar(
-                      backgroundImage: NetworkImage(usertmp.ppicture),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/profile');
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(usertmp.ppicture),
+                      ),
                     )
                   ],
                 ),
@@ -78,18 +83,23 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       ),
                     ),
-                    Text(
-                      'SS2021',
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
+                    Row(children: <Widget>[
+                      Text(
+                        'SS2021',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.yellow,
-                    )
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.yellow,
+                      )
+                    ])
                   ],
                 ),
               ),
@@ -113,18 +123,23 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       ),
                     ),
-                    Text(
-                      'SS2021',
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
+                    Row(children: <Widget>[
+                      Text(
+                        'SS2021',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.yellow,
-                    )
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.yellow,
+                      )
+                    ])
                   ],
                 ),
               ),
@@ -148,18 +163,23 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       ),
                     ),
-                    Text(
-                      'SS2021',
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
+                    Row(children: <Widget>[
+                      Text(
+                        'SS2021',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.grey,
-                    )
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.grey,
+                      )
+                    ])
                   ],
                 ),
               ),
@@ -183,18 +203,23 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       ),
                     ),
-                    Text(
-                      'SS2021',
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
+                    Row(children: <Widget>[
+                      Text(
+                        'SS2021',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.grey,
-                    )
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.grey,
+                      )
+                    ])
                   ],
                 ),
               ),
@@ -218,18 +243,23 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       ),
                     ),
-                    Text(
-                      'SS2021',
-                      style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
+                    Row(children: <Widget>[
+                      Text(
+                        'SS2021',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      color: Colors.grey,
-                    )
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.grey,
+                      )
+                    ])
                   ],
                 ),
               ),
@@ -243,7 +273,7 @@ class _HomeState extends State<Home> {
             ),
             Center(
               child: Text('Total subjects: 5 ',
-                  style: TextStyle(fontSize: 13, fontFamily: 'Montserrat')),
+                  style: TextStyle(fontSize: 16, fontFamily: 'Montserrat')),
             )
           ],
         ));

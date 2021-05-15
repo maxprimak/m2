@@ -66,14 +66,13 @@ class _LoginState extends State<Login> {
             ),
           ),
           Container(
-            height: 40,
-            width: 250,
-            decoration: BoxDecoration(
-                color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-            child: FlatButton(
+            margin: const EdgeInsets.fromLTRB(100, 0, 100, 0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue[800],
+              ),
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => Home()));
+                Navigator.pushReplacementNamed(context, '/home');
               },
               child: Text(
                 'Login',
@@ -86,8 +85,8 @@ class _LoginState extends State<Login> {
           ),
           FlatButton(
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => Home()));
+              Navigator.pushReplacementNamed(context,
+                  '/home'); //, MaterialPageRoute(builder: (_) => Home())
             },
             child: Text(
               'Forgot Password',
