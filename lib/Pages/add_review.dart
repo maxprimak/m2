@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../Services/user_profile.dart';
 import '../Services/global.dart' as global;
@@ -14,11 +15,6 @@ class _AddReviewState extends State<AddReview> {
 
   // Style
   final _listFont = TextStyle(fontSize: 18.0, fontFamily: 'Montserrat');
-  final _starFont = TextStyle(fontSize: 25.0, fontFamily: 'Montserrat');
-
-  // Data
-  List<bool> starsArrayDiff = [true, false, false, false, false];
-  List<bool> starsArrayTeach = [false, false, false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +34,10 @@ class _AddReviewState extends State<AddReview> {
               SizedBox(height: 10),
               _getDivider(),
               _buildRow('Difficulty'),
-              _buildStars(starsArrayDiff),
+              _buildStars(),
               _getDivider(),
               _buildRow('Teachers team'),
-              _buildStars(starsArrayTeach),
+              _buildStars(),
               _getDivider(),
               _buildRow('Reviews'),
               _buildInputBox(),
@@ -55,44 +51,24 @@ class _AddReviewState extends State<AddReview> {
     );
   }
 
-  Widget _buildStars(List<bool> starsArray) {
+  Widget _buildStars() {
     return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          new IconButton(
-            icon: new Icon(
-              starsArray.elementAt(0) ? Icons.star : Icons.star_border,
-              color: starsArray.elementAt(0) ? Colors.yellow[800] : null,
+          RatingBar.builder(
+            initialRating: 1,
+            minRating: 1,
+            direction: Axis.horizontal,
+            allowHalfRating: true,
+            itemCount: 5,
+            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+            itemBuilder: (context, _) => Icon(
+              Icons.star,
+              color: Colors.amber,
             ),
-            onPressed: (){},
-          ),
-          new IconButton(
-            icon: new Icon(
-              starsArray[1] ? Icons.star : Icons.star_border,
-              color: starsArray[1] ? Colors.yellow[800] : null,
-            ),
-            onPressed: (){},
-          ),
-          new IconButton(
-            icon: new Icon(
-              starsArray[2] ? Icons.star : Icons.star_border,
-              color: starsArray[2] ? Colors.yellow[800] : null,
-            ),
-            onPressed: (){},
-          ),
-          new IconButton(
-            icon: new Icon(
-              starsArray[3] ? Icons.star : Icons.star_border,
-              color: starsArray[3] ? Colors.yellow[800] : null,
-            ),
-            onPressed: (){},
-          ),
-          new IconButton(
-            icon: new Icon(
-              starsArray[4] ? Icons.star : Icons.star_border,
-              color: starsArray[4] ? Colors.yellow[800] : null,
-            ),
-            onPressed: (){},
+            onRatingUpdate: (rating) {
+              print(rating);
+            },
           ),
         ]);
   }
