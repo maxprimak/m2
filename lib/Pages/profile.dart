@@ -18,20 +18,8 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Feedbacksy',
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: CircleAvatar(
-              backgroundImage: NetworkImage(_user.ppicture),
-            ),
-          )
-        ],
-      ),
       body: ListView(children: <Widget>[
+        _getHeader(),
         Center(
           child: Column(
             children: [
@@ -149,6 +137,24 @@ class _ProfileState extends State<Profile> {
             Fluttertoast.showToast(msg: 'Passwords do not match!');
           }
         },
+      ),
+    );
+  }
+
+  Padding _getHeader() {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Text(
+            "Feedbacksy",
+            style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
+          ),
+          CircleAvatar(
+            backgroundImage: NetworkImage(_user.ppicture),
+          )
+        ],
       ),
     );
   }
