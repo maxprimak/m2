@@ -16,6 +16,10 @@ class _AddReviewState extends State<AddReview> {
   final _listFont = TextStyle(fontSize: 18.0, fontFamily: 'Montserrat');
   final _starFont = TextStyle(fontSize: 25.0, fontFamily: 'Montserrat');
 
+  // Data
+  List<bool> starsArrayDiff = [true, false, false, false, false];
+  List<bool> starsArrayTeach = [false, false, false, false, false];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,30 +35,66 @@ class _AddReviewState extends State<AddReview> {
               _getDivider(),
               _getLvInfo(),
               _getLvTeacherInfo(),
-                  SizedBox(height: 10),
-                  _getDivider(),
-                  _buildRow('Difficulty'),
-                  _buildStars(),
-                  _getDivider(),
-                  _buildRow('Teachers team'),
-                  _buildStars(),
-                  _getDivider(),
-                  _buildRow('Reviews'),
-                  _buildInputBox(),
-                  _saveButton()
+              SizedBox(height: 10),
+              _getDivider(),
+              _buildRow('Difficulty'),
+              _buildStars(starsArrayDiff),
+              _getDivider(),
+              _buildRow('Teachers team'),
+              _buildStars(starsArrayTeach),
+              _getDivider(),
+              _buildRow('Reviews'),
+              _buildInputBox(),
+              _saveButton()
             ])));
   }
 
   Widget _buildRow(String title) {
     return ListTile(
-        title: new Text(title, style: _listFont),
-        );
+      title: new Text(title, style: _listFont),
+    );
   }
 
-  Widget _buildStars() {
-    return ListTile(
-      title: new Text('⭐ ⭐️ ⭐️ ⭐️ ⭐️️', style: _starFont),
-    );
+  Widget _buildStars(List<bool> starsArray) {
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          new IconButton(
+            icon: new Icon(
+              starsArray.elementAt(0) ? Icons.star : Icons.star_border,
+              color: starsArray.elementAt(0) ? Colors.yellow[800] : null,
+            ),
+            onPressed: (){},
+          ),
+          new IconButton(
+            icon: new Icon(
+              starsArray[1] ? Icons.star : Icons.star_border,
+              color: starsArray[1] ? Colors.yellow[800] : null,
+            ),
+            onPressed: (){},
+          ),
+          new IconButton(
+            icon: new Icon(
+              starsArray[2] ? Icons.star : Icons.star_border,
+              color: starsArray[2] ? Colors.yellow[800] : null,
+            ),
+            onPressed: (){},
+          ),
+          new IconButton(
+            icon: new Icon(
+              starsArray[3] ? Icons.star : Icons.star_border,
+              color: starsArray[3] ? Colors.yellow[800] : null,
+            ),
+            onPressed: (){},
+          ),
+          new IconButton(
+            icon: new Icon(
+              starsArray[4] ? Icons.star : Icons.star_border,
+              color: starsArray[4] ? Colors.yellow[800] : null,
+            ),
+            onPressed: (){},
+          ),
+        ]);
   }
 
   Widget _buildInputBox() {
@@ -78,7 +118,6 @@ class _AddReviewState extends State<AddReview> {
             onPressed: () {
               Navigator.pop(context);
             },
-
             style: ElevatedButton.styleFrom(primary: Colors.white),
             child: Text("Publish review",
                 style: TextStyle(
