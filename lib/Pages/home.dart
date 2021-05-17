@@ -286,7 +286,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      'VU Business Intelligence I',
+                      'VU Business Intelligence',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
