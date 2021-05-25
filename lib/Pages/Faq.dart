@@ -62,38 +62,50 @@ class Faq extends StatelessWidget {
                   height: 30,
                 ),
                 Text(
-                  "Question 1?",
-                  style: TextStyle(fontFamily: 'Montserrato', fontSize: 25),
+                  "How to add a review?",
+                  style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae rutrum orci. Aliquam sollicitudin odio vel luctus lacinia. Curabitur vel diam eget nibh tempor blandit non non tellus. In ut ultricies urna. Vestibulum nec ex iaculis, tristique leo ut, consectetur metus. Pellentesque laoreet est sem, sit amet pulvinar est auctor luctus."),
+                    "After you find your Subject, you want to create review for click on it. In the Subject you will find an button with “Add review” sign where you can create the review for your subject."),
                 SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "Question 2?",
-                  style: TextStyle(fontFamily: 'Montserrato', fontSize: 25),
+                  "Can I change my name?",
+                  style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae rutrum orci. Aliquam sollicitudin odio vel luctus lacinia. Curabitur vel diam eget nibh tempor blandit non non tellus. In ut ultricies urna. Vestibulum nec ex iaculis, tristique leo ut, consectetur metus. Pellentesque laoreet est sem, sit amet pulvinar est auctor luctus."),
+                    "No. Your name is taken from Moodle / Uspace profile so therefore it can not be changed."),
                 SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "Question 3?",
-                  style: TextStyle(fontFamily: 'Montserrato', fontSize: 25),
+                  "Can I change my password?",
+                  style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae rutrum orci. Aliquam sollicitudin odio vel luctus lacinia. Curabitur vel diam eget nibh tempor blandit non non tellus. In ut ultricies urna. Vestibulum nec ex iaculis, tristique leo ut, consectetur metus. Pellentesque laoreet est sem, sit amet pulvinar est auctor luctus."),
+                    "No. Your name is taken from Moodle / Uspace profile so therefore it can not be changed."),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "How to change the profile picture?",
+                  style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                    "The profile picture is taken from Moodle. So it needs to be change on moodle site of your school."),
               ],
             ),
           )

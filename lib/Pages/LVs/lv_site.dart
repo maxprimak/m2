@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 import '../../Services/user_profile.dart';
 import '../../Services/lv.dart';
@@ -14,6 +15,7 @@ class _Lv_profileState extends State<Lv_profile> {
   User usertmp = User(name: "Peter");
 
   Color _favIconColor = Colors.grey;
+  int amountofreviews = global.templist.length;
 
   @override
   Widget build(BuildContext context) {
@@ -102,13 +104,43 @@ class _Lv_profileState extends State<Lv_profile> {
                   "Avg. Mark: ${global.algo.avgmark}",
                   style: TextStyle(fontSize: 20),
                 ),
-                Text(
-                  "Difficulty: ${global.algo.difficulty}",
-                  style: TextStyle(fontSize: 20),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "Difficulty:",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    SmoothStarRating(
+                        allowHalfRating: true,
+                        starCount: 5,
+                        rating: 4.5,
+                        size: 30.0,
+                        isReadOnly: true,
+                        color: Colors.yellow[700],
+                        borderColor: Colors.yellow[700],
+                        filledIconData: Icons.star,
+                        halfFilledIconData: Icons.star_half,
+                        spacing: 0.0)
+                  ],
                 ),
-                Text(
-                  "Teachers team: ${global.algo.techteam}",
-                  style: TextStyle(fontSize: 20),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "Teachers team:",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    SmoothStarRating(
+                        allowHalfRating: true,
+                        starCount: 5,
+                        rating: 4.5,
+                        size: 30.0,
+                        isReadOnly: true,
+                        color: Colors.yellow[700],
+                        borderColor: Colors.yellow[700],
+                        filledIconData: Icons.star,
+                        halfFilledIconData: Icons.star_half,
+                        spacing: 0.0)
+                  ],
                 ),
                 SizedBox(
                   height: 20,
@@ -117,12 +149,12 @@ class _Lv_profileState extends State<Lv_profile> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      "Reviews",
+                      "Reviews ( $amountofreviews )",
                       style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
                     ),
                     ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/addreview');
+                          Navigator.pushReplacementNamed(context, '/addreview');
                         },
                         style: ElevatedButton.styleFrom(primary: Colors.white),
                         child: Text("Add review",

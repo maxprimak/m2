@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:m2/Pages/LVs/lv_site.dart';
 import 'package:m2/Pages/menu.dart';
 import 'package:m2/Services/user_profile.dart';
+import '../Widgets/menu.dart' as bmenu;
 
 class Home extends StatefulWidget {
   @override
@@ -19,15 +20,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     User usertmp = User(name: "Peter");
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-            child: Icon(
-              Icons.menu,
-              color: Colors.black,
-            ),
-            backgroundColor: Colors.white,
-            onPressed: () {
-              Navigator.pushNamed(context, '/menu');
-            }),
         body: ListView(
           padding: const EdgeInsets.all(8),
           scrollDirection: Axis.vertical,
@@ -337,6 +329,20 @@ class _HomeState extends State<Home> {
                   style: TextStyle(fontSize: 16, fontFamily: 'Montserrat')),
             )
           ],
-        ));
+        ),
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text("Home"),
+              backgroundColor: Colors.green),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              title: Text("Profile"),
+              backgroundColor: Colors.green),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              title: Text("Settings"),
+              backgroundColor: Colors.green),
+        ]));
   }
 }
