@@ -16,6 +16,8 @@ class _HomeState extends State<Home> {
   Color _favIconColorIn = Colors.grey;
   Color _favIconColorBus = Colors.grey;
 
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     User usertmp = User(name: "Peter");
@@ -330,19 +332,37 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(items: [
-          BottomNavigationBarItem(
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 0,
+          items: [
+            BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: Text("Home"),
-              backgroundColor: Colors.green),
-          BottomNavigationBarItem(
+            ),
+            BottomNavigationBarItem(
               icon: Icon(Icons.person),
               title: Text("Profile"),
-              backgroundColor: Colors.green),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              title: Text("Settings"),
-              backgroundColor: Colors.green),
-        ]));
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.question_answer),
+              title: Text("FAQ"),
+            ),
+          ],
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+            switch (_currentIndex) {
+              case 0:
+                break;
+              case 1:
+                Navigator.pushNamed(context, '/profile');
+                break;
+              case 2:
+                Navigator.pushNamed(context, '/faq');
+                break;
+            }
+          },
+        ));
   }
 }

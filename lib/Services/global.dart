@@ -33,8 +33,9 @@ Review r4 = Review(
 List<Review> templist = [r1, r2, r3, r4];
 //LVs
 Lv algo = Lv(
-    lv_id: 666,
-    name: "Algorithmen und Datenstrukturen 1",
-    profesors: "A. Dumbledore, M. McGonagallov",
-    avgmark: 4.3,
-    r_list: templist);
+  lv_id: 666,
+  name: "Algorithmen und Datenstrukturen 1",
+  profesors: "A. Dumbledore, M. McGonagallov",
+  avgmark: 4.3,
+  r_list: templist,
+);
