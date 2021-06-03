@@ -10,27 +10,65 @@ Review r1 = Review(
     teacher: 4,
     examdiff: 4,
     text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis tellus nec turpis hendrerit ultrices. Curabitur risus purus, rutrum ultrices nulla ut, lacinia rhoncus ante. Sed ut urna nulla. Pellentesque.");
+        "Ich finde die ADS sehr schwer und zu wenig zeit für alles was wir da machen. Ich würde empfehlen bisschen mehr zu arbeiten und zuhören.");
 
 Review r2 = Review(
     teacher: 4,
     examdiff: 1,
-    text:
-        "Praesent vel ante nisi. Ut vel erat lorem. Ut pharetra arcu sed turpis feugiat, id tincidunt purus blandit. Donec ornare lectus ut urna maximus, non posuere quam feugiat.");
+    text: "Jo, ADS ist ok. Ich hatte schon eine bessere Lv aber geht’s schon.");
 
 Review r3 = Review(
-    teacher: 1,
-    examdiff: 1,
+    teacher: 5,
+    examdiff: 3,
     text:
-        "onec sagittis urna id orci consequat, ut cursus est ultricies. Pellentesque varius sed orci quis iaculis. Vestibulum fermentum nibh vitae sapien suscipit, quis maximus odio lobortis.");
+        "Die ADS ist schlecht. Ich würde lieber in KFC arbeiten, wie diese LV wieder zu machen. Die Lehrer nur präsentieren und das Forum ist nicht das Beste, was sein könnte.");
 
 Review r4 = Review(
-    teacher: 1,
+    teacher: 3,
     examdiff: 1,
     text:
-        "onec sagittis urna id orci consequat, ut cursus est ultricies. Pellentesque varius sed orci quis iaculis. Vestibulum fermentum nibh vitae sapien suscipit, quis maximus odio lobortis.");
+        "Ja geht’s. War nicht so schlecht, wenn machen zu hört und mitmacht während der LV.");
 
-List<Review> templist = [r1, r2, r3, r4];
+Review r5 =
+    Review(teacher: 5, examdiff: 4, text: "Ich will es nie mehr sehen :)");
+
+Review r6 = Review(
+    teacher: 5,
+    examdiff: 5,
+    text:
+        "Für mich war es schwer. Ich hatte kein Boch darauf. Ich hatte so viele Schwierigkeiten damit, dass ich es fast nicht geschafft habe.");
+
+Review r7 = Review(
+    teacher: 1,
+    examdiff: 2,
+    text:
+        "Ja, ganz großartige Lv. Ich würde gerne noch was damit machen. Die Lehrer waren super nur der Test war schlecht…");
+
+Review r8 = Review(
+    teacher: 3,
+    examdiff: 5,
+    text:
+        "Die beste Sache, war wenn der Lehrer gesagt hat, dass wir das Projekt in 5 Tagen abgeben sollen… Ich habe nie so was erwartet von den. Plus der Test war schwierig as Hell.");
+
+Review r9 = Review(
+    teacher: 3,
+    examdiff: 4,
+    text:
+        "Ja, ich habe schon schlechtere Sachen gemacht, aber es ist nicht die einfachste LV.");
+
+Review r10 = Review(
+    teacher: 2,
+    examdiff: 3,
+    text:
+        "Die Lehrer sind schon ok aber der Stoff und der Test sind nicht die einfachste. Ich würde bisschen mehr lernen empfehlen.");
+
+Review r11 = Review(
+    teacher: 2,
+    examdiff: 5,
+    text:
+        "Na ja, der Test habe ich nicht erwartet. Ich habe es echt schlecht geschrieben und ich muss es wiederholen… Die Lehrer sind gut, aber ich hab es nicht verstanden, was die von mir wollten…");
+
+List<Review> templist = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11];
 //LVs
 Lv algo = Lv(
   lv_id: 666,
