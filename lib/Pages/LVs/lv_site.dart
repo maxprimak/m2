@@ -14,7 +14,8 @@ class Lv_profile extends StatefulWidget {
 class _Lv_profileState extends State<Lv_profile> {
   User usertmp = User(name: "Peter");
 
-  Color _favIconColor = Colors.grey;
+  // Color _favIconColor = Colors.red;
+  Color _favIconColor = global.favIconColorADS;
   int amountofreviews = global.templist.length;
 
   @override
@@ -111,7 +112,11 @@ class _Lv_profileState extends State<Lv_profile> {
                     borderColor: Colors.yellow[700],
                     filledIconData: Icons.star,
                     halfFilledIconData: Icons.star_half,
-                    spacing: 0.0)
+                    spacing: 0.0),
+                Text(
+                  "("+global.algo.numberDiffReview.toString()+")",
+                  style: TextStyle(fontSize: 15),
+                ),
               ],
             ),
             Row(
@@ -130,7 +135,11 @@ class _Lv_profileState extends State<Lv_profile> {
                     borderColor: Colors.yellow[700],
                     filledIconData: Icons.star,
                     halfFilledIconData: Icons.star_half,
-                    spacing: 0.0)
+                    spacing: 0.0),
+                Text(
+                  "("+global.algo.numberTeachReview.toString()+")",
+                  style: TextStyle(fontSize: 15),
+                ),
               ],
             ),
             SizedBox(

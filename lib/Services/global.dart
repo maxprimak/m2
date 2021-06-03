@@ -1,5 +1,8 @@
 library M2.global;
 
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
 import 'package:m2/Services/lv.dart';
 import 'package:m2/Services/review.dart';
 
@@ -77,3 +80,5 @@ Lv algo = Lv(
   avgmark: 4.3,
   r_list: templist,
 );
+
+Color favIconColorADS = Colors.red;
