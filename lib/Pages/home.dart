@@ -3,6 +3,7 @@ import 'package:m2/Pages/LVs/lv_site.dart';
 import 'package:m2/Pages/menu.dart';
 import 'package:m2/Services/user_profile.dart';
 import '../Widgets/menu.dart' as bmenu;
+import '../Services/global.dart' as global;
 
 class Home extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  Color _favIconColorADS = Colors.grey;
+  // Color _favIconColorADS = Colors.red;
   Color _favIconColorDB = Colors.grey;
   Color _favIconColorPR1 = Colors.grey;
   Color _favIconColorIn = Colors.grey;
@@ -97,13 +98,13 @@ class _HomeState extends State<Home> {
                       ),
                       IconButton(
                           icon: Icon(Icons.favorite),
-                          color: _favIconColorADS,
+                          color: global.favIconColorADS,
                           onPressed: () {
                             setState(() {
-                              if (_favIconColorADS == Colors.grey) {
-                                _favIconColorADS = Colors.red;
+                              if (global.favIconColorADS == Colors.grey) {
+                                global.favIconColorADS = Colors.red;
                               } else {
-                                _favIconColorADS = Colors.grey;
+                                global.favIconColorADS = Colors.grey;
                               }
                             });
                           })

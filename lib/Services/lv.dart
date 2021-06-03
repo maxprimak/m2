@@ -7,6 +7,8 @@ class Lv {
   double avgmark;
   double difficulty;
   double techteam;
+  int numberDiffReview = 7;
+  int numberTeachReview = 10;
   List<Review> r_list;
 
   Lv({this.lv_id, this.name, this.profesors, this.avgmark, this.r_list});

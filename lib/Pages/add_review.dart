@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:m2/Services/review.dart';
 
 import '../Services/user_profile.dart';
 import '../Services/global.dart' as global;
@@ -19,7 +20,6 @@ class _AddReviewState extends State<AddReview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: _getMenuButton(context),
         body: SafeArea(
             child: ListView(
                 padding: const EdgeInsets.all(8),
@@ -33,10 +33,10 @@ class _AddReviewState extends State<AddReview> {
               _getLvTeacherInfo(),
               SizedBox(height: 10),
               _getDivider(),
-              _buildRow('Difficulty'),
+              _buildRow('Difficulty*'),
               _buildStars(),
               _getDivider(),
-              _buildRow('Teachers team'),
+              _buildRow('Teachers team*'),
               _buildStars(),
               _getDivider(),
               _buildRow('Reviews'),
@@ -92,7 +92,8 @@ class _AddReviewState extends State<AddReview> {
       children: <Widget>[
         ElevatedButton(
             onPressed: () {
-              Navigator.pop(context);
+              addReviewToStorage();
+              Navigator.pushReplacementNamed(context, '/lv');
             },
             style: ElevatedButton.styleFrom(primary: Colors.white),
             child: Text("Publish review",
@@ -103,16 +104,16 @@ class _AddReviewState extends State<AddReview> {
     );
   }
 
-  FloatingActionButton _getMenuButton(context) {
-    return FloatingActionButton(
-        child: Icon(
-          Icons.menu,
-          color: Colors.black,
-        ),
-        backgroundColor: Colors.white,
-        onPressed: () {
-          Navigator.pushNamed(context, '/menu');
-        });
+  void addReviewToStorage(){
+    global.algo.numberTeachReview += 1;
+    global.algo.numberDiffReview += 1;
+    if (editingController.text.isNotEmpty) {
+      Review newReview = Review(
+          teacher: 4,
+          examdiff: 4,
+          text: editingController.text);
+      global.algo.r_list.add(newReview);
+    }
   }
 
   Padding _getHeader() {
@@ -163,7 +164,7 @@ class _AddReviewState extends State<AddReview> {
           ),
           Icon(
             Icons.favorite,
-            color: Colors.red,
+            color: global.favIconColorADS,
           )
         ],
       ),
