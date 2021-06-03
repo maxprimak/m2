@@ -27,12 +27,12 @@ class _ProfileState extends State<Profile> {
   final optionNotificationReviewDeletedName = "Review deleted";
   final optionSoundOnName = "Sound";
   final optionPublicOnName = "Public";
-  final TextStyle _listHeaderTextStyle = TextStyle(
-      fontFamily: 'Montserrat', fontSize: 35, fontWeight: FontWeight.bold);
+  final TextStyle _listHeaderTextStyle =
+      TextStyle(fontFamily: 'Rubik', fontSize: 35, fontWeight: FontWeight.bold);
   final TextStyle _listSettingTextStyle =
-      TextStyle(fontFamily: 'Montserrat', fontSize: 25);
+      TextStyle(fontFamily: 'Rubik', fontSize: 25);
   final TextStyle _listTileTextStyle =
-      TextStyle(fontFamily: 'Montserrat', fontSize: 20);
+      TextStyle(fontFamily: 'Rubik', fontSize: 20);
 
   int _currentIndexprofil = 1;
   @override
@@ -40,16 +40,6 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
         body: ListView(children: <Widget>[
           _getHeader(),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-            child: Container(
-              color: Colors.grey[400],
-              height: 1,
-            ),
-          ),
           Center(
             child: Column(
               children: [
@@ -60,8 +50,7 @@ class _ProfileState extends State<Profile> {
                     children: [
                       Text(
                         "Profile",
-                        style:
-                            TextStyle(fontFamily: 'Montserrat', fontSize: 35),
+                        style: TextStyle(fontFamily: 'Rubik', fontSize: 35),
                       )
                     ],
                   ),
@@ -78,13 +67,13 @@ class _ProfileState extends State<Profile> {
                     padding: EdgeInsets.only(top: 10),
                     child: Text(
                       "${_user.name} ${_user.lastname}",
-                      style: TextStyle(fontFamily: 'Montserrat', fontSize: 20),
+                      style: TextStyle(fontFamily: 'Rubik', fontSize: 20),
                     )),
                 Container(
                     padding: EdgeInsets.all(10),
                     child: Text("#Student",
                         style: TextStyle(
-                            fontFamily: 'Montserrat',
+                            fontFamily: 'Rubik',
                             fontSize: 15,
                             color: Colors.grey))),
               ],
@@ -192,9 +181,7 @@ class _ProfileState extends State<Profile> {
               child: Text(
                 'Log out',
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontFamily: 'Montserrat'),
+                    color: Colors.white, fontSize: 20, fontFamily: 'Rubik'),
               ),
             ),
           ),
@@ -204,15 +191,26 @@ class _ProfileState extends State<Profile> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              title: Text("Home"),
+              title: Text("Home",
+                  style: TextStyle(
+                    fontFamily: 'Rubik',
+                  )),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              title: Text("Profile"),
+              title: Text("Profile",
+                  style: TextStyle(
+                    fontFamily: 'Rubik',
+                  )),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.question_answer),
-              title: Text("FAQ"),
+              title: Text(
+                "FAQ",
+                style: TextStyle(
+                  fontFamily: 'Rubik',
+                ),
+              ),
             ),
           ],
           onTap: (index) {
@@ -233,17 +231,32 @@ class _ProfileState extends State<Profile> {
         ));
   }
 
-  Padding _getHeader() {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            "Feedbacksy",
-            style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
-          ),
-        ],
+  Container _getHeader() {
+    return Container(
+      color: Colors.blue,
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(10, 20, 20, 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              "Feedbacksy",
+              style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                  fontFamily: 'Rubik',
+                  fontWeight: FontWeight.bold),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/profile');
+              },
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(_user.ppicture),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -25,12 +25,12 @@ class _SettingsState extends State<Settings> {
   final optionNotificationReviewDeletedName = "Review deleted";
   final optionSoundOnName = "Sound";
   final optionPublicOnName = "Public";
-  final TextStyle _listHeaderTextStyle = TextStyle(
-      fontFamily: 'Montserrat', fontSize: 35, fontWeight: FontWeight.bold);
+  final TextStyle _listHeaderTextStyle =
+      TextStyle(fontFamily: 'Rubik', fontSize: 35, fontWeight: FontWeight.bold);
   final TextStyle _listSettingTextStyle =
-      TextStyle(fontFamily: 'Montserrat', fontSize: 25);
+      TextStyle(fontFamily: 'Rubik', fontSize: 25);
   final TextStyle _listTileTextStyle =
-      TextStyle(fontFamily: 'Montserrat', fontSize: 20);
+      TextStyle(fontFamily: 'Rubik', fontSize: 20);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _SettingsState extends State<Settings> {
               children: <Widget>[
                 Text(
                   "Feedbacksy",
-                  style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
+                  style: TextStyle(fontSize: 25, fontFamily: 'Rubik'),
                 ),
                 InkWell(
                   onTap: () {

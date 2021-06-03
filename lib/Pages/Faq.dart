@@ -18,34 +18,31 @@ class _FaqState extends State<Faq> {
         body: SafeArea(
             child: ListView(
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    "Feedbacksy",
-                    style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/profile');
-                    },
-                    child: CircleAvatar(
-                      backgroundImage: NetworkImage(usertmp.ppicture),
+            Container(
+              color: Colors.blue,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10, 20, 20, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      "Feedbacksy",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontFamily: 'Rubik',
+                          fontWeight: FontWeight.bold),
                     ),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-              child: Container(
-                color: Colors.grey[400],
-                height: 1,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/profile');
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(usertmp.ppicture),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -55,56 +52,79 @@ class _FaqState extends State<Faq> {
                 children: <Widget>[
                   Text(
                     "FAQ",
-                    style: TextStyle(fontFamily: 'Montserrato', fontSize: 35),
+                    style: TextStyle(
+                        fontFamily: 'Rubik',
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 30,
                   ),
                   Text(
                     "How to add a review?",
-                    style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
+                    style: TextStyle(
+                        fontFamily: 'Rubik',
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
-                      "After you find your Subject, you want to create review for click on it. In the Subject you will find an button with “Add review” sign where you can create the review for your subject."),
+                    "After you find your Subject, you want to create review for click on it. In the Subject you will find an button with “Add review” sign where you can create the review for your subject.",
+                    style: TextStyle(fontFamily: 'Rubik', fontSize: 17),
+                  ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
                     "Can I change my name?",
-                    style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
+                    style: TextStyle(
+                        fontFamily: 'Rubik',
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
-                      "No. Your name is taken from Moodle / U:space profile so therefore it can not be changed."),
+                    "No. Your name is taken from Moodle / U:space profile so therefore it can not be changed.",
+                    style: TextStyle(fontFamily: 'Rubik', fontSize: 17),
+                  ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
                     "Can I change my password?",
-                    style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
+                    style: TextStyle(
+                        fontFamily: 'Rubik',
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
-                      "No. Your name is taken from Moodle / U:space profile so therefore it can not be changed."),
+                    "No. Your name is taken from Moodle / U:space profile so therefore it can not be changed.",
+                    style: TextStyle(fontFamily: 'Rubik', fontSize: 17),
+                  ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
                     "How to change the profile picture?",
-                    style: TextStyle(fontFamily: 'Montserrato', fontSize: 20),
+                    style: TextStyle(
+                        fontFamily: 'Rubik',
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
-                      "The profile picture is taken from Moodle. So it needs to be changed on moodle site of your school."),
+                    "The profile picture is taken from Moodle. So it needs to be changed on moodle site of your school.",
+                    style: TextStyle(fontFamily: 'Rubik', fontSize: 17),
+                  ),
                 ],
               ),
             )

@@ -15,34 +15,31 @@ class _AddReviewState extends State<AddReview> {
   TextEditingController editingController = TextEditingController();
 
   // Style
-  final _listFont = TextStyle(fontSize: 18.0, fontFamily: 'Montserrat');
+  final _listFont = TextStyle(fontSize: 18.0, fontFamily: 'Rubik');
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
             child: ListView(
-                padding: const EdgeInsets.all(8),
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 children: <Widget>[
-              _getHeader(),
-              SizedBox(height: 10),
-              _getDivider(),
-              _getLvInfo(),
-              _getLvTeacherInfo(),
-              SizedBox(height: 10),
-              _getDivider(),
-              _buildRow('Difficulty*'),
-              _buildStars(),
-              _getDivider(),
-              _buildRow('Teachers team*'),
-              _buildStars(),
-              _getDivider(),
-              _buildRow('Reviews'),
-              _buildInputBox(),
-              _saveButton()
-            ])));
+          _getHeader(),
+          _getLvInfo(),
+          _getLvTeacherInfo(),
+          SizedBox(height: 10),
+          _getDivider(),
+          _buildRow('Difficulty*'),
+          _buildStars(),
+          _getDivider(),
+          _buildRow('Teachers team*'),
+          _buildStars(),
+          _getDivider(),
+          _buildRow('Reviews'),
+          _buildInputBox(),
+          _saveButton()
+        ])));
   }
 
   Widget _buildRow(String title) {
@@ -104,37 +101,42 @@ class _AddReviewState extends State<AddReview> {
     );
   }
 
-  void addReviewToStorage(){
+  void addReviewToStorage() {
     global.algo.numberTeachReview += 1;
     global.algo.numberDiffReview += 1;
     if (editingController.text.isNotEmpty) {
-      Review newReview = Review(
-          teacher: 4,
-          examdiff: 4,
-          text: editingController.text);
+      Review newReview =
+          Review(teacher: 4, examdiff: 4, text: editingController.text);
       global.algo.r_list.add(newReview);
     }
   }
 
-  Padding _getHeader() {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            "Feedbacksy",
-            style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, '/profile');
-            },
-            child: CircleAvatar(
-              backgroundImage: NetworkImage(usertmp.ppicture),
+  Container _getHeader() {
+    return Container(
+      color: Colors.blue,
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(10, 20, 20, 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              "Feedbacksy",
+              style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.white,
+                  fontFamily: 'Rubik',
+                  fontWeight: FontWeight.bold),
             ),
-          )
-        ],
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/profile');
+              },
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(usertmp.ppicture),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -159,7 +161,7 @@ class _AddReviewState extends State<AddReview> {
             constraints: BoxConstraints(maxWidth: 200),
             child: Text(
               global.algo.name,
-              style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
+              style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
             ),
           ),
           Icon(
@@ -179,7 +181,7 @@ class _AddReviewState extends State<AddReview> {
         children: <Widget>[
           Text(
             "By ${global.algo.profesors}",
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
           ),
         ],
       ),

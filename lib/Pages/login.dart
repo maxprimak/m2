@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
           ),
           Center(
               child: Text('Feedbacksy',
-                  style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'))),
+                  style: TextStyle(fontSize: 40, fontFamily: 'Rubik'))),
           Padding(
             padding: const EdgeInsets.only(top: 50.0),
             child: Center(
@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
           ),
           Center(
               child: Text('Login',
-                  style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'))),
+                  style: TextStyle(fontSize: 20, fontFamily: 'Rubik'))),
           Padding(
             padding: const EdgeInsets.only(top: 5.0),
             child: Center(
@@ -81,9 +81,7 @@ class _LoginState extends State<Login> {
               child: Text(
                 'Login',
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontFamily: 'Montserrat'),
+                    color: Colors.white, fontSize: 20, fontFamily: 'Rubik'),
               ),
             ),
           ),
@@ -94,13 +92,19 @@ class _LoginState extends State<Login> {
             child: Text(
               'Forgot Password',
               style: TextStyle(
-                  color: Colors.blue, fontSize: 15, fontFamily: 'Montserrat'),
+                  color: Colors.blue, fontSize: 15, fontFamily: 'Rubik'),
             ),
           ),
           SizedBox(
             height: 130,
           ),
-          Center(child: Text('Powered by Moodle')),
+          Center(
+            child: Text(
+              'Powered by Moodle',
+              style: TextStyle(
+                  color: Colors.blue[800], fontSize: 15, fontFamily: 'Rubik'),
+            ),
+          ),
         ],
       )),
     );

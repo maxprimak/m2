@@ -23,34 +23,31 @@ class _Lv_profileState extends State<Lv_profile> {
     return Scaffold(
         body: SafeArea(
             child: ListView(children: <Widget>[
-      Padding(
-        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Text(
-              "Feedbacksy",
-              style: TextStyle(fontSize: 25, fontFamily: 'Montserrat'),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, '/profile');
-              },
-              child: CircleAvatar(
-                backgroundImage: NetworkImage(usertmp.ppicture),
+      Container(
+        color: Colors.blue,
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(10, 20, 20, 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                "Feedbacksy",
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontFamily: 'Rubik',
+                    fontWeight: FontWeight.bold),
               ),
-            )
-          ],
-        ),
-      ),
-      SizedBox(
-        height: 10,
-      ),
-      Padding(
-        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-        child: Container(
-          color: Colors.grey[400],
-          height: 1,
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage(usertmp.ppicture),
+                ),
+              )
+            ],
+          ),
         ),
       ),
       Padding(
@@ -62,7 +59,7 @@ class _Lv_profileState extends State<Lv_profile> {
               constraints: BoxConstraints(maxWidth: 200),
               child: Text(
                 global.algo.name,
-                style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
+                style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
               ),
             ),
             IconButton(
@@ -87,20 +84,20 @@ class _Lv_profileState extends State<Lv_profile> {
           children: <Widget>[
             Text(
               "By ${global.algo.profesors}",
-              style: TextStyle(fontSize: 15),
+              style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
             ),
             SizedBox(
               height: 30,
             ),
             Text(
               "Avg. Mark: ${global.algo.avgmark}",
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
             ),
             Row(
               children: <Widget>[
                 Text(
                   "Difficulty:",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
                 ),
                 SmoothStarRating(
                     allowHalfRating: true,
@@ -114,8 +111,8 @@ class _Lv_profileState extends State<Lv_profile> {
                     halfFilledIconData: Icons.star_half,
                     spacing: 0.0),
                 Text(
-                  "("+global.algo.numberDiffReview.toString()+")",
-                  style: TextStyle(fontSize: 15),
+                  "(" + global.algo.numberDiffReview.toString() + ")",
+                  style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
                 ),
               ],
             ),
@@ -123,7 +120,7 @@ class _Lv_profileState extends State<Lv_profile> {
               children: <Widget>[
                 Text(
                   "Teachers team:",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
                 ),
                 SmoothStarRating(
                     allowHalfRating: true,
@@ -137,7 +134,7 @@ class _Lv_profileState extends State<Lv_profile> {
                     halfFilledIconData: Icons.star_half,
                     spacing: 0.0),
                 Text(
-                  "("+global.algo.numberTeachReview.toString()+")",
+                  "(" + global.algo.numberTeachReview.toString() + ")",
                   style: TextStyle(fontSize: 15),
                 ),
               ],
@@ -150,7 +147,7 @@ class _Lv_profileState extends State<Lv_profile> {
               children: <Widget>[
                 Text(
                   "Reviews ( $amountofreviews )",
-                  style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
+                  style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
                 ),
                 ElevatedButton(
                     onPressed: () {
@@ -159,8 +156,7 @@ class _Lv_profileState extends State<Lv_profile> {
                     style: ElevatedButton.styleFrom(primary: Colors.white),
                     child: Text("Add review",
                         style: TextStyle(
-                          color: Colors.black,
-                        )))
+                            color: Colors.black, fontFamily: 'Rubik')))
               ],
             ),
             SizedBox(
