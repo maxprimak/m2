@@ -153,10 +153,12 @@ class _Lv_profileState extends State<Lv_profile> {
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, '/addreview');
                     },
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
+                    style: ElevatedButton.styleFrom(primary: Colors.blue[600]),
                     child: Text("Add review",
                         style: TextStyle(
-                            color: Colors.black, fontFamily: 'Rubik')))
+                            color: Colors.white,
+                            fontFamily: 'Rubik',
+                            fontWeight: FontWeight.bold)))
               ],
             ),
             SizedBox(

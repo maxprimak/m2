@@ -87,16 +87,19 @@ class _AddReviewState extends State<AddReview> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        ElevatedButton(
-            onPressed: () {
-              addReviewToStorage();
-              Navigator.pushReplacementNamed(context, '/lv');
-            },
-            style: ElevatedButton.styleFrom(primary: Colors.white),
-            child: Text("Publish review",
-                style: TextStyle(
-                  color: Colors.black,
-                )))
+        Padding(
+          padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+          child: ElevatedButton(
+              onPressed: () {
+                addReviewToStorage();
+                Navigator.pushReplacementNamed(context, '/lv');
+              },
+              style: ElevatedButton.styleFrom(primary: Colors.blue[600]),
+              child: Text("Publish review",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ))),
+        )
       ],
     );
   }
