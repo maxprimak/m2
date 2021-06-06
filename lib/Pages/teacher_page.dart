@@ -175,7 +175,7 @@ class _TeacherPage extends State<TeacherPage> {
                               ),
                             if (global.dropdownValue == 'by Semester')
                               Text(
-                                "Review #${i+1},  ${global.algo.sortList[i].semestr}",
+                                "Review #${i+1},  ${global.algo.sortList[i].semestr}, ADS 1",
                                 style: TextStyle(fontSize: 18),
                               ),
                             SizedBox(height: 5),
