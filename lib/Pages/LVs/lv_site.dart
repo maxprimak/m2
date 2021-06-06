@@ -142,6 +142,19 @@ class _Lv_profileState extends State<Lv_profile> {
             SizedBox(
               height: 20,
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/addreview');
+                },
+                style: ElevatedButton.styleFrom(primary: Colors.blue[600]),
+                child: Text("Add review",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Rubik',
+                        fontWeight: FontWeight.bold))),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -149,16 +162,7 @@ class _Lv_profileState extends State<Lv_profile> {
                   "Reviews ( $amountofreviews )",
                   style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
                 ),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/addreview');
-                    },
-                    style: ElevatedButton.styleFrom(primary: Colors.blue[600]),
-                    child: Text("Add review",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Rubik',
-                            fontWeight: FontWeight.bold)))
+                getSortButton(),
               ],
             ),
             SizedBox(
@@ -175,11 +179,12 @@ class _Lv_profileState extends State<Lv_profile> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Review Nr.: ${i + 1}",
+                      "Review #${i + 1},  ${global.algo.r_list[i].semestr}",
                       style: TextStyle(fontSize: 18),
                     ),
                     SizedBox(height: 5),
                     Text(global.algo.r_list[i].text),
+
                   ],
                 ),
               )
@@ -188,4 +193,38 @@ class _Lv_profileState extends State<Lv_profile> {
       )
     ])));
   }
+
+  Widget getSortButton() {
+    return DropdownButton<String>(
+      value: global.dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      iconSize: 18,
+      elevation: 16,
+      style: const TextStyle(
+          fontFamily: 'Rubik',
+          fontSize: 15,
+        color: Colors.black,
+
+      ),
+      underline: Container(
+        height: 0.5,
+        color: Colors.black,
+      ),
+      onChanged: (String newValue) {
+        setState(() {
+          global.dropdownValue = newValue;
+        });
+      },
+      items: <String>['by Date', 'by Semester']
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value,  style: TextStyle(color: Colors.black, fontSize: 15, fontFamily: 'Rubik')),
+        );
+      })
+          .toList(),
+    );
+  }
+
+
 }

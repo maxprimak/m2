@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:m2/Pages/teacher_page.dart';
 
 //import all of your site files here
 import 'Pages/add_review.dart';
@@ -21,6 +22,7 @@ void main() => runApp(MaterialApp(
         '/profile': (context) => Profile(),
         '/settings': (context) => Settings(),
         '/addreview': (context) => AddReview(),
-        '/menu': (context) => MenuPage()
+        '/menu': (context) => MenuPage(),
+        '/teacher' : (context) => TeacherPage()
       },
     )); //App starter

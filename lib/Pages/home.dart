@@ -77,7 +77,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'ADS 1',
+                            'VU ADS 1',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'Datenbanksysteme',
+                            'VU Datenbanksysteme',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
@@ -179,7 +179,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'Programmierung 1 (PR1)',
+                            'VO Programmierung 1',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
