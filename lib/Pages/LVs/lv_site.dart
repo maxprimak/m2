@@ -59,7 +59,7 @@ class _Lv_profileState extends State<Lv_profile> {
               constraints: BoxConstraints(maxWidth: 200),
               child: Text(
                 global.algo.name,
-                style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
+                style: TextStyle(fontSize: 20, fontFamily: 'Rubik', fontWeight: FontWeight.bold),
               ),
             ),
             IconButton(
@@ -82,9 +82,26 @@ class _Lv_profileState extends State<Lv_profile> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              "By ${global.algo.profesors}",
-              style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/teacher');
+              },
+              child:  Text(
+                " ${global.algo.profesor1} ︎▶",
+                style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+              ),
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/teacher');
+              },
+              child:  Text(
+                " ${global.algo.profesor2} ▶",
+                style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+              ),
             ),
             SizedBox(
               height: 30,
@@ -92,6 +109,9 @@ class _Lv_profileState extends State<Lv_profile> {
             Text(
               "Avg. Mark: ${global.algo.avgmark}",
               style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
+            ),
+            SizedBox(
+              height: 3,
             ),
             Row(
               children: <Widget>[

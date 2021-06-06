@@ -184,7 +184,7 @@ class _AddReviewState extends State<AddReview> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "By ${global.algo.profesors}",
+            "By ${global.algo.profesor1}",
             style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
           ),
         ],

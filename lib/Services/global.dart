@@ -91,12 +91,15 @@ List<Review> sortlist = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
 Lv algo = Lv(
   lv_id: 666,
   name: "Algorithmen und Datenstrukturen 1",
-  profesors: "A. Dumbledore, M. McGonagallov",
-  avgmark: 4.3,
+  profesor1: "Prof. A. Dumbledore",
+    profesor2: "Prof. M. McGonagallov",
+    avgmark: 4.3,
   r_list: templist,
   sortList: sortlist
 );
 
 Color favIconColorADS = Colors.red;
 String dropdownValue = 'by Date';
+String profPicture = "https://images-na.ssl-images-amazon.com/images/I/518AdW4A7pL._AC_.jpg";
+
 

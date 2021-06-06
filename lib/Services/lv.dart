@@ -3,7 +3,8 @@ import 'review.dart';
 class Lv {
   int lv_id;
   String name;
-  String profesors;
+  String profesor1;
+  String profesor2;
   double avgmark;
   double difficulty;
   double techteam;
@@ -12,7 +13,7 @@ class Lv {
   List<Review> r_list;
   List<Review> sortList;
 
-  Lv({this.lv_id, this.name, this.profesors, this.avgmark, this.r_list, this.sortList});
+  Lv({this.lv_id, this.name, this.profesor1, this.profesor2, this.avgmark, this.r_list, this.sortList});
 }
 
 Lv resultcalculate(Lv tmp) {
@@ -26,7 +27,7 @@ Lv resultcalculate(Lv tmp) {
 
   tmpreturn.lv_id = tmp.lv_id;
   tmpreturn.name = tmp.name;
-  tmpreturn.profesors = tmp.profesors;
+  tmpreturn.profesor1 = tmp.profesor1;
   tmpreturn.avgmark = tmp.avgmark;
   tmpreturn.techteam = teach / tmp.r_list.length;
   tmpreturn.difficulty = diff / tmp.r_list.length;

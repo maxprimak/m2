@@ -58,22 +58,19 @@ class _TeacherPage extends State<TeacherPage> {
                     Container(
                       constraints: BoxConstraints(maxWidth: 200),
                       child: Text(
-                        global.algo.name,
-                        style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
+                        global.algo.profesor1,
+                        style: TextStyle(fontSize: 20, fontFamily: 'Rubik', fontWeight: FontWeight.bold),
                       ),
                     ),
-                    IconButton(
-                        icon: Icon(Icons.favorite),
-                        color: _favIconColor,
-                        onPressed: () {
-                          setState(() {
-                            if (_favIconColor == Colors.grey) {
-                              _favIconColor = Colors.red;
-                            } else {
-                              _favIconColor = Colors.grey;
-                            }
-                          });
-                        })
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/profile');
+                      },
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundImage: NetworkImage(global.profPicture),
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -83,8 +80,33 @@ class _TeacherPage extends State<TeacherPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "By ${global.algo.profesors}",
-                      style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+                      "2021S:",
+                      style: TextStyle(fontSize: 15, fontFamily: 'Rubik', fontWeight: FontWeight.bold),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacementNamed(context, '/lv');
+                      },
+                      child:  Text(
+                        "Algorithmen und Datenstrukturen 1  ︎▶",
+                        style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 3,
+                    ),
+                    Text(
+                      "2020W:",
+                      style: TextStyle(fontSize: 15, fontFamily: 'Rubik', fontWeight: FontWeight.bold),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacementNamed(context, '/lv');
+                      },
+                      child:  Text(
+                        "Programmierung 1  ︎▶",
+                        style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+                      ),
                     ),
                     SizedBox(
                       height: 30,
@@ -92,6 +114,9 @@ class _TeacherPage extends State<TeacherPage> {
                     Text(
                       "Avg. Mark: ${global.algo.avgmark}",
                       style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
+                    ),
+                    SizedBox(
+                      height: 3,
                     ),
                     Row(
                       children: <Widget>[
@@ -116,32 +141,10 @@ class _TeacherPage extends State<TeacherPage> {
                         ),
                       ],
                     ),
-                    Row(
-                      children: <Widget>[
-                        Text(
-                          "Teachers team:",
-                          style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
-                        ),
-                        SmoothStarRating(
-                            allowHalfRating: true,
-                            starCount: 5,
-                            rating: 4.5,
-                            size: 30.0,
-                            isReadOnly: true,
-                            color: Colors.yellow[700],
-                            borderColor: Colors.yellow[700],
-                            filledIconData: Icons.star,
-                            halfFilledIconData: Icons.star_half,
-                            spacing: 0.0),
-                        Text(
-                          "(" + global.algo.numberTeachReview.toString() + ")",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
-                    ),
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -149,22 +152,13 @@ class _TeacherPage extends State<TeacherPage> {
                           "Reviews ( $amountofreviews )",
                           style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
                         ),
-                        ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(context, '/addreview');
-                            },
-                            style: ElevatedButton.styleFrom(primary: Colors.blue[600]),
-                            child: Text("Add review",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.bold)))
+                        getSortButton(),
                       ],
                     ),
                     SizedBox(
                       height: 15,
                     ),
-                    for (var i = 0; i < global.algo.r_list.length; i++)
+                    for (var i = global.algo.r_list.length - 1; i >= 0; i--)
                       Container(
                         decoration: BoxDecoration(
                             color: Colors.grey[200],
@@ -174,12 +168,21 @@ class _TeacherPage extends State<TeacherPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(
-                              "Review Nr.: ${i + 1}",
-                              style: TextStyle(fontSize: 18),
-                            ),
+                            if (global.dropdownValue == 'by Date')
+                              Text(
+                                "Review #${i+1},  ${global.algo.r_list[i].semestr}, ADS 1",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                            if (global.dropdownValue == 'by Semester')
+                              Text(
+                                "Review #${i+1},  ${global.algo.sortList[i].semestr}",
+                                style: TextStyle(fontSize: 18),
+                              ),
                             SizedBox(height: 5),
-                            Text(global.algo.r_list[i].text),
+                            if (global.dropdownValue == 'by Date')
+                              Text(global.algo.r_list[i].text),
+                            if (global.dropdownValue == 'by Semester')
+                              Text(global.algo.sortList[i].text),
                           ],
                         ),
                       )
@@ -188,4 +191,38 @@ class _TeacherPage extends State<TeacherPage> {
               )
             ])));
   }
+
+  Widget getSortButton() {
+    return DropdownButton<String>(
+      value: global.dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      iconSize: 18,
+      elevation: 16,
+      style: const TextStyle(
+        fontFamily: 'Rubik',
+        fontSize: 15,
+        color: Colors.black,
+
+      ),
+      underline: Container(
+        height: 0.5,
+        color: Colors.black,
+      ),
+      onChanged: (String newValue) {
+        setState(() {
+          global.dropdownValue = newValue;
+        });
+      },
+      items: <String>['by Date', 'by Semester']
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value,  style: TextStyle(color: Colors.black, fontSize: 15, fontFamily: 'Rubik')),
+        );
+      })
+          .toList(),
+    );
+  }
+
+
 }
