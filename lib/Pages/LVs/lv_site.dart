@@ -168,7 +168,7 @@ class _Lv_profileState extends State<Lv_profile> {
             SizedBox(
               height: 15,
             ),
-            for (var i = 0; i < global.algo.r_list.length; i++)
+            for (var i = global.algo.r_list.length - 1; i >= 0; i--)
               Container(
                 decoration: BoxDecoration(
                     color: Colors.grey[200],
@@ -178,13 +178,21 @@ class _Lv_profileState extends State<Lv_profile> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    if (global.dropdownValue == 'by Date')
                     Text(
-                      "Review #${i + 1},  ${global.algo.r_list[i].semestr}",
+                      "Review #${i+1},  ${global.algo.r_list[i].semestr}",
                       style: TextStyle(fontSize: 18),
                     ),
+                    if (global.dropdownValue == 'by Semester')
+                      Text(
+                        "Review #${i+1},  ${global.algo.sortList[i].semestr}",
+                        style: TextStyle(fontSize: 18),
+                      ),
                     SizedBox(height: 5),
-                    Text(global.algo.r_list[i].text),
-
+                    if (global.dropdownValue == 'by Date')
+                      Text(global.algo.r_list[i].text),
+                    if (global.dropdownValue == 'by Semester')
+                      Text(global.algo.sortList[i].text),
                   ],
                 ),
               )

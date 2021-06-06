@@ -109,8 +109,9 @@ class _AddReviewState extends State<AddReview> {
     global.algo.numberDiffReview += 1;
     if (editingController.text.isNotEmpty) {
       Review newReview =
-          Review(teacher: 4, examdiff: 4, text: editingController.text);
+          Review(teacher: 4, examdiff: 4, text: editingController.text, semestr: '2021S');
       global.algo.r_list.add(newReview);
+      global.algo.sortList.add(newReview);
     }
   }
 

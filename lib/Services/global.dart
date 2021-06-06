@@ -85,7 +85,8 @@ Review r11 = Review(
         "Na ja, der Test habe ich nicht erwartet. Ich habe es echt schlecht geschrieben und ich muss es wiederholen… Die Lehrer sind gut, aber ich hab es nicht verstanden, was die von mir wollten…",
     semestr: '2020W');
 
-List<Review> templist = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11];
+List<Review> templist = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
+List<Review> sortlist = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
 //LVs
 Lv algo = Lv(
   lv_id: 666,
@@ -93,7 +94,9 @@ Lv algo = Lv(
   profesors: "A. Dumbledore, M. McGonagallov",
   avgmark: 4.3,
   r_list: templist,
+  sortList: sortlist
 );
 
 Color favIconColorADS = Colors.red;
 String dropdownValue = 'by Date';
+
