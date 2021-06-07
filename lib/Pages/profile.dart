@@ -169,22 +169,24 @@ class _ProfileState extends State<Profile> {
               });
             },
           ),
-          Container(
-            margin: const EdgeInsets.fromLTRB(100, 0, 100, 0),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blue[800],
-              ),
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, '/login');
-              },
-              child: Text(
-                'Log out',
-                style: TextStyle(
-                    color: Colors.white, fontSize: 20, fontFamily: 'Rubik'),
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(15, 0, 0, 20),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacementNamed(context, '/login');
+                },
+                child: Text(
+                  "Log out",
+                  style: TextStyle(
+                      fontFamily: 'Rubik', fontSize: 20, color: Colors.blue),
+                ),
               ),
             ),
-          ),
+          )
         ]),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 1,
