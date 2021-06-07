@@ -24,7 +24,7 @@ class _SettingsState extends State<Settings> {
   final optionNotificationReviewViewedName = "Review viewed";
   final optionNotificationReviewDeletedName = "Review deleted";
   final optionSoundOnName = "Sound";
-  final optionPublicOnName = "Public";
+  final optionPublicOnName = "Vibrate";
   final TextStyle _listHeaderTextStyle =
       TextStyle(fontFamily: 'Rubik', fontSize: 35, fontWeight: FontWeight.bold);
   final TextStyle _listSettingTextStyle =

@@ -88,7 +88,7 @@ class _Lv_profileState extends State<Lv_profile> {
               },
               child:  Text(
                 " ${global.algo.profesor1} ︎▶",
-                style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+                style: TextStyle(fontSize: 15, fontFamily: 'Rubik', color: Colors.blue),
               ),
             ),
             SizedBox(
@@ -100,7 +100,7 @@ class _Lv_profileState extends State<Lv_profile> {
               },
               child:  Text(
                 " ${global.algo.profesor2} ▶",
-                style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+                style: TextStyle(fontSize: 15, fontFamily: 'Rubik', color: Colors.blue),
               ),
             ),
             SizedBox(

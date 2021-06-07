@@ -89,7 +89,7 @@ class _TeacherPage extends State<TeacherPage> {
                       },
                       child:  Text(
                         "Algorithmen und Datenstrukturen 1  ︎▶",
-                        style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+                        style: TextStyle(fontSize: 15, fontFamily: 'Rubik', color: Colors.blue),
                       ),
                     ),
                     SizedBox(
@@ -105,7 +105,7 @@ class _TeacherPage extends State<TeacherPage> {
                       },
                       child:  Text(
                         "Programmierung 1  ︎▶",
-                        style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
+                        style: TextStyle(fontSize: 15, fontFamily: 'Rubik', color: Colors.blue),
                       ),
                     ),
                     SizedBox(
