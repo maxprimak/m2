@@ -1,4 +1,4 @@
-## Readme - M3
+## Readme - M4
 
 * Gruppe:	1 - 13:15
 * Team-Nr.: 113
@@ -15,6 +15,7 @@ Pixel 3
 
 Externe Libraries und Frameworks:
 flutter_rating_bar: ^4.0.0
+smooth_star_rating: 1.1.1
 
 Dauer der Entwicklung:
 20 Stunden
