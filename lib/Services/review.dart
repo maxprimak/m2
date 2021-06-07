@@ -3,6 +3,7 @@ class Review {
   int examdiff;
   String text;
   String semestr;
+  String user;
 
-  Review({this.teacher, this.examdiff, this.text, this.semestr});
+  Review({this.teacher, this.examdiff, this.text, this.semestr, this.user});
 }

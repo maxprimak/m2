@@ -13,6 +13,7 @@ class AddReview extends StatefulWidget {
 class _AddReviewState extends State<AddReview> {
   User usertmp = User(name: "Peter");
   TextEditingController editingController = TextEditingController();
+  bool checkAnonym = false;
 
   // Style
   final _listFont = TextStyle(fontSize: 18.0, fontFamily: 'Rubik');
@@ -38,8 +39,26 @@ class _AddReviewState extends State<AddReview> {
           _getDivider(),
           _buildRow('Reviews'),
           _buildInputBox(),
-          _saveButton()
+                  _checkBox(),
+          _saveButton(),
+
         ])));
+  }
+
+  Widget _checkBox(){
+    return Row(
+      children: [
+        Checkbox(
+          value: this.checkAnonym,
+          onChanged: (value) {
+            setState(() {
+              this.checkAnonym = !this.checkAnonym;
+            });
+          },
+        ),
+        Text('Anonym'),
+      ],
+    );
   }
 
   Widget _buildRow(String title) {
@@ -107,9 +126,11 @@ class _AddReviewState extends State<AddReview> {
   void addReviewToStorage() {
     global.algo.numberTeachReview += 1;
     global.algo.numberDiffReview += 1;
+    String userName = "Peter Schwarzer";
+    if (this.checkAnonym) userName ="Anonym";
     if (editingController.text.isNotEmpty) {
       Review newReview =
-          Review(teacher: 4, examdiff: 4, text: editingController.text, semestr: '2021S');
+          Review(teacher: 4, examdiff: 4, text: editingController.text, semestr: '2021S', user: userName);
       global.algo.r_list.add(newReview);
       global.algo.sortList.add(newReview);
     }

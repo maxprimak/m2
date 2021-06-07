@@ -170,12 +170,12 @@ class _TeacherPage extends State<TeacherPage> {
                           children: <Widget>[
                             if (global.dropdownValue == 'by Date')
                               Text(
-                                "Review #${i+1},  ${global.algo.r_list[i].semestr}, ADS 1",
+                                "${global.algo.r_list[i].user}, ${global.algo.r_list[i].semestr}, ADS 1",
                                 style: TextStyle(fontSize: 18),
                               ),
                             if (global.dropdownValue == 'by Semester')
                               Text(
-                                "Review #${i+1},  ${global.algo.sortList[i].semestr}, ADS 1",
+                                "${global.algo.r_list[i].user}, ${global.algo.sortList[i].semestr}, ADS 1",
                                 style: TextStyle(fontSize: 18),
                               ),
                             SizedBox(height: 5),
