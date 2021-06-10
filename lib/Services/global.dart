@@ -144,7 +144,7 @@ List<Review> sortlistPR = [r9, r8, r11, r7, r4, r3];
 
 Lv prLV = Lv(
     lv_id: 666,
-    name: "VO Programmirung 1",
+    name: "VO Programmierung 1",
     profesor1: "Prof. F. Flitwick",
     profesor2: "Prof. S. Snape",
     avgmark: 3.9,
