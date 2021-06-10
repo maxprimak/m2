@@ -88,7 +88,7 @@ class _TeacherPage extends State<TeacherPage> {
                         Navigator.pushReplacementNamed(context, '/lv');
                       },
                       child:  Text(
-                        "Algorithmen und Datenstrukturen 1  ︎▶",
+                        "${global.currLV.name}  ︎▶",
                         style: TextStyle(fontSize: 15, fontFamily: 'Rubik', color: Colors.blue),
                       ),
                     ),

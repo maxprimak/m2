@@ -105,8 +105,8 @@ String profPicture =
 
 
 // ADS
-List<Review> templistAds = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
-List<Review> sortlistAds = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+List<Review> templistAds = [r11, r10, r8, r7, r4, r3, r2, r1];
+List<Review> sortlistAds = [r10, r8, r11, r7, r2, r4, r3, r1];
 
 Lv adsLV = Lv(
     lv_id: 666,
@@ -122,8 +122,8 @@ Lv adsLV = Lv(
 Color favIconColorAD = Colors.red;
 
 // Datenbank
-List<Review> templistDB = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
-List<Review> sortlistDB = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+List<Review> templistDB = [r10, r9, r8, r6, r5, r4, r1];
+List<Review> sortlistDB = [r10, r9, r8, r6, r5, r4, r1];
 
 Lv dbLV = Lv(
     lv_id: 666,
@@ -139,8 +139,8 @@ Lv dbLV = Lv(
 Color favIconColorDBS = Colors.red;
 
 // Programmirung
-List<Review> templistPR = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
-List<Review> sortlistPR = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+List<Review> templistPR = [r11, r9, r8, r7, r4, r3];
+List<Review> sortlistPR = [r9, r8, r11, r7, r4, r3];
 
 Lv prLV = Lv(
     lv_id: 666,
@@ -149,15 +149,15 @@ Lv prLV = Lv(
     profesor2: "Prof. S. Snape",
     avgmark: 3.9,
     r_list: templistPR,
-    sortList: templistPR,
+    sortList: sortlistPR,
     liked: favIconColorPR
 );
 
 Color favIconColorPR = Colors.grey;
 
 // Interoperabilität
-List<Review> templistIN = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
-List<Review> sortlistIN = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+List<Review> templistIN = [r11, r9, r8, r7, r4, r3];
+List<Review> sortlistIN = [r9, r8, r11, r7, r4, r3];
 
 Lv inLV = Lv(
     lv_id: 666,
@@ -166,15 +166,15 @@ Lv inLV = Lv(
     profesor2: "Prof. F. Flitwick",
     avgmark: 4.4,
     r_list: templistIN,
-    sortList: templistIN,
+    sortList: sortlistIN,
     liked: favIconColorIN
 );
 
 Color favIconColorIN = Colors.grey;
 
 // VU Business Intelligence
-List<Review> templistBI = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
-List<Review> sortlistBI = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+List<Review> templistBI = [r11, r9, r8, r7, r4, r3];
+List<Review> sortlistBI = [r9, r8, r11, r7, r4, r3];
 
 Lv biLV = Lv(
     lv_id: 666,
@@ -183,7 +183,7 @@ Lv biLV = Lv(
     profesor2: "Prof. F. Flitwick",
     avgmark: 4.4,
     r_list: templistBI,
-    sortList: templistBI,
+    sortList: sortlistBI,
     liked: favIconColorBI
 );
 

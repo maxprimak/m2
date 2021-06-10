@@ -197,7 +197,7 @@ class _Lv_profileState extends State<Lv_profile> {
                     ),
                     if (global.dropdownValue == 'by Semester')
                       Text(
-                        "${global.currLV.r_list[i].user}, ${global.currLV.sortList[i].semestr}",
+                        "${global.currLV.sortList[i].user}, ${global.currLV.sortList[i].semestr}",
                         style: TextStyle(fontSize: 18),
                       ),
                     SizedBox(height: 5),
