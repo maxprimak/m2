@@ -124,15 +124,15 @@ class _AddReviewState extends State<AddReview> {
   }
 
   void addReviewToStorage() {
-    global.algo.numberTeachReview += 1;
-    global.algo.numberDiffReview += 1;
+    global.currLV.numberTeachReview += 1;
+    global.currLV.numberDiffReview += 1;
     String userName = "Peter Schwarzer";
     if (this.checkAnonym) userName ="Anonym";
     if (editingController.text.isNotEmpty) {
       Review newReview =
           Review(teacher: 4, examdiff: 4, text: editingController.text, semestr: '2021S', user: userName);
-      global.algo.r_list.add(newReview);
-      global.algo.sortList.add(newReview);
+      global.currLV.r_list.add(newReview);
+      global.currLV.sortList.add(newReview);
     }
   }
 
@@ -185,7 +185,7 @@ class _AddReviewState extends State<AddReview> {
           Container(
             constraints: BoxConstraints(maxWidth: 200),
             child: Text(
-              global.algo.name,
+              global.currLV.name,
               style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
             ),
           ),
@@ -205,7 +205,7 @@ class _AddReviewState extends State<AddReview> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "By ${global.algo.profesor1}",
+            "By ${global.currLV.profesor1}",
             style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
           ),
         ],

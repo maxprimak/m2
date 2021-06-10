@@ -95,19 +95,26 @@ Review r11 = Review(
     semestr: '2020W',
     user: "Paul Graham");
 
-List<Review> templist = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
-List<Review> sortlist = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
 //LVs
-Lv algo = Lv(
+Lv currLV = adsLV;
+
+// Extra
+String dropdownValue = 'by Date';
+String profPicture =
+    "https://images-na.ssl-images-amazon.com/images/I/518AdW4A7pL._AC_.jpg";
+
+
+// ADS
+List<Review> templistAds = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
+List<Review> sortlistAds = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+
+Lv adsLV = Lv(
     lv_id: 666,
     name: "Algorithmen und Datenstrukturen 1",
     profesor1: "Prof. A. Dumbledore",
     profesor2: "Prof. M. McGonagallov",
     avgmark: 4.3,
-    r_list: templist,
-    sortList: sortlist);
+    r_list: templistAds,
+    sortList: sortlistAds);
 
 Color favIconColorADS = Colors.red;
-String dropdownValue = 'by Date';
-String profPicture =
-    "https://images-na.ssl-images-amazon.com/images/I/518AdW4A7pL._AC_.jpg";

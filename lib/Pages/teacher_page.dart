@@ -16,7 +16,7 @@ class _TeacherPage extends State<TeacherPage> {
 
   // Color _favIconColor = Colors.red;
   Color _favIconColor = global.favIconColorADS;
-  int amountofreviews = global.templist.length;
+  int amountofreviews = global.currLV.r_list.length;
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class _TeacherPage extends State<TeacherPage> {
                     Container(
                       constraints: BoxConstraints(maxWidth: 200),
                       child: Text(
-                        global.algo.profesor1,
+                        global.currLV.profesor1,
                         style: TextStyle(fontSize: 20, fontFamily: 'Rubik', fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -112,7 +112,7 @@ class _TeacherPage extends State<TeacherPage> {
                       height: 30,
                     ),
                     Text(
-                      "Avg. Mark: ${global.algo.avgmark}",
+                      "Avg. Mark: ${global.currLV.avgmark}",
                       style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
                     ),
                     SizedBox(
@@ -136,7 +136,7 @@ class _TeacherPage extends State<TeacherPage> {
                             halfFilledIconData: Icons.star_half,
                             spacing: 0.0),
                         Text(
-                          "(" + global.algo.numberDiffReview.toString() + ")",
+                          "(" + global.currLV.numberDiffReview.toString() + ")",
                           style: TextStyle(fontSize: 15, fontFamily: 'Rubik'),
                         ),
                       ],
@@ -158,7 +158,7 @@ class _TeacherPage extends State<TeacherPage> {
                     SizedBox(
                       height: 15,
                     ),
-                    for (var i = global.algo.r_list.length - 1; i >= 0; i--)
+                    for (var i = global.currLV.r_list.length - 1; i >= 0; i--)
                       Container(
                         decoration: BoxDecoration(
                             color: Colors.grey[200],
@@ -170,19 +170,19 @@ class _TeacherPage extends State<TeacherPage> {
                           children: <Widget>[
                             if (global.dropdownValue == 'by Date')
                               Text(
-                                "${global.algo.r_list[i].user}, ${global.algo.r_list[i].semestr}, ADS 1",
+                                "${global.currLV.r_list[i].user}, ${global.currLV.r_list[i].semestr}, ADS 1",
                                 style: TextStyle(fontSize: 18),
                               ),
                             if (global.dropdownValue == 'by Semester')
                               Text(
-                                "${global.algo.r_list[i].user}, ${global.algo.sortList[i].semestr}, ADS 1",
+                                "${global.currLV.r_list[i].user}, ${global.currLV.sortList[i].semestr}, ADS 1",
                                 style: TextStyle(fontSize: 18),
                               ),
                             SizedBox(height: 5),
                             if (global.dropdownValue == 'by Date')
-                              Text(global.algo.r_list[i].text),
+                              Text(global.currLV.r_list[i].text),
                             if (global.dropdownValue == 'by Semester')
-                              Text(global.algo.sortList[i].text),
+                              Text(global.currLV.sortList[i].text),
                           ],
                         ),
                       )
