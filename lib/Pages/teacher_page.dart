@@ -149,7 +149,7 @@ class _TeacherPage extends State<TeacherPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Text(
-                          "Reviews ( $amountofreviews )",
+                          "Prof's LV Reviews ( $amountofreviews )",
                           style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
                         ),
                         getSortButton(),
@@ -170,12 +170,12 @@ class _TeacherPage extends State<TeacherPage> {
                           children: <Widget>[
                             if (global.dropdownValue == 'by Date')
                               Text(
-                                "${global.currLV.r_list[i].user}, ${global.currLV.r_list[i].semestr}, ADS 1",
+                                "${global.currLV.r_list[i].user}, ${global.currLV.r_list[i].semestr}, ${global.currLV.name}",
                                 style: TextStyle(fontSize: 18),
                               ),
                             if (global.dropdownValue == 'by Semester')
                               Text(
-                                "${global.currLV.r_list[i].user}, ${global.currLV.sortList[i].semestr}, ADS 1",
+                                "${global.currLV.r_list[i].user}, ${global.currLV.sortList[i].semestr}, ${global.currLV.name}",
                                 style: TextStyle(fontSize: 18),
                               ),
                             SizedBox(height: 5),
