@@ -13,14 +13,14 @@ Review r1 = Review(
     teacher: 4,
     examdiff: 4,
     text:
-        "Ich finde die ADS sehr schwer und zu wenig zeit für alles was wir da machen. Ich würde empfehlen bisschen mehr zu arbeiten und zuhören.",
+        "Ich finde die VO sehr schwer und zu wenig zeit für alles was wir da machen. Ich würde empfehlen bisschen mehr zu arbeiten und zuhören.",
     semestr: '2021S',
     user: "Anonym");
 
 Review r2 = Review(
     teacher: 4,
     examdiff: 1,
-    text: "Jo, ADS ist ok. Ich hatte schon eine bessere Lv aber geht’s schon.",
+    text: "Jo, Lecture ist ok. Ich hatte schon eine bessere Lv aber geht’s schon.",
     semestr: '2020W',
     user: "Max Mustermann");
 
@@ -28,9 +28,9 @@ Review r3 = Review(
     teacher: 5,
     examdiff: 3,
     text:
-        "Die ADS ist schlecht. Ich würde lieber als Bundeskanzler arbeiten, wie diese LV wieder zu machen. Die Lehrer nur präsentieren und das Forum ist nicht das Beste, was sein könnte.",
+        "Die LV ist schlecht. Ich würde lieber als Bundeskanzler arbeiten, wie diese LV wieder zu machen. Die Lehrer nur präsentieren und das Forum ist nicht das Beste, was sein könnte.",
     semestr: '2021S',
-    user: "Sebastian Kurz");
+    user: "Sebastian Lang");
 
 Review r4 = Review(
     teacher: 3,
@@ -100,8 +100,6 @@ Lv currLV = adsLV;
 
 // Extra
 String dropdownValue = 'by Date';
-String profPicture =
-    "https://images-na.ssl-images-amazon.com/images/I/518AdW4A7pL._AC_.jpg";
 
 
 // ADS
@@ -116,7 +114,8 @@ Lv adsLV = Lv(
     avgmark: 4.3,
     r_list: templistAds,
     sortList: sortlistAds,
-    liked: favIconColorAD
+    liked: favIconColorAD,
+    profPicture: "https://images-na.ssl-images-amazon.com/images/I/518AdW4A7pL._AC_.jpg"
 );
 
 Color favIconColorAD = Colors.red;
@@ -133,7 +132,8 @@ Lv dbLV = Lv(
     avgmark: 3.8,
     r_list: templistDB,
     sortList: sortlistDB,
-    liked: favIconColorDBS
+    liked: favIconColorDBS,
+    profPicture: "https://static.wikia.nocookie.net/harrypotter/images/a/a3/Severus_Snape.jpg/revision/latest?cb=20150307193047"
 );
 
 Color favIconColorDBS = Colors.red;
@@ -150,7 +150,8 @@ Lv prLV = Lv(
     avgmark: 3.9,
     r_list: templistPR,
     sortList: sortlistPR,
-    liked: favIconColorPR
+    liked: favIconColorPR,
+    profPicture: "https://static.wikia.nocookie.net/harrypotter/images/a/a9/Filiusflitwick.PNG/revision/latest?cb=20100303183700"
 );
 
 Color favIconColorPR = Colors.grey;
@@ -167,7 +168,8 @@ Lv inLV = Lv(
     avgmark: 4.4,
     r_list: templistIN,
     sortList: sortlistIN,
-    liked: favIconColorIN
+    liked: favIconColorIN,
+    profPicture: "https://static.wikia.nocookie.net/harrypotter/images/a/a3/Severus_Snape.jpg/revision/latest?cb=20150307193047"
 );
 
 Color favIconColorIN = Colors.grey;
@@ -184,7 +186,8 @@ Lv biLV = Lv(
     avgmark: 4.4,
     r_list: templistBI,
     sortList: sortlistBI,
-    liked: favIconColorBI
+    liked: favIconColorBI,
+    profPicture: "https://static.wikia.nocookie.net/harrypotter/images/a/a3/Severus_Snape.jpg/revision/latest?cb=20150307193047"
 );
 
 Color favIconColorBI = Colors.grey;

@@ -68,7 +68,7 @@ class _TeacherPage extends State<TeacherPage> {
                       },
                       child: CircleAvatar(
                         radius: 30,
-                        backgroundImage: NetworkImage(global.profPicture),
+                        backgroundImage: NetworkImage(global.currLV.profPicture),
                       ),
                     )
                   ],

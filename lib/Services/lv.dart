@@ -15,8 +15,9 @@ class Lv {
   List<Review> r_list;
   List<Review> sortList;
   Color liked;
+  String profPicture;
 
-  Lv({this.lv_id, this.name, this.profesor1, this.profesor2, this.avgmark, this.r_list, this.sortList, this.liked});
+  Lv({this.lv_id, this.name, this.profesor1, this.profesor2, this.avgmark, this.r_list, this.sortList, this.liked, this.profPicture});
 }
 
 Lv resultcalculate(Lv tmp) {
