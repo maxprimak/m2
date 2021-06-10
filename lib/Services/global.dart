@@ -118,3 +118,63 @@ Lv adsLV = Lv(
     sortList: sortlistAds);
 
 Color favIconColorADS = Colors.red;
+
+// Datenbank
+List<Review> templistDB = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
+List<Review> sortlistDB = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+
+Lv dbLV = Lv(
+    lv_id: 666,
+    name: "VU Datenbanksysteme",
+    profesor1: "Prof. S. Snape",
+    profesor2: "Prof. M. McGonagallov",
+    avgmark: 3.8,
+    r_list: templistDB,
+    sortList: sortlistDB);
+
+Color favIconColorDBS = Colors.red;
+
+// Programmirung
+List<Review> templistPR = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
+List<Review> sortlistPR = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+
+Lv prLV = Lv(
+    lv_id: 666,
+    name: "VO Programmirung 1",
+    profesor1: "Prof. F. Flitwick",
+    profesor2: "Prof. S. Snape",
+    avgmark: 3.9,
+    r_list: templistPR,
+    sortList: templistPR);
+
+Color favIconColorPR = Colors.red;
+
+// Interoperabilität
+List<Review> templistIN = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
+List<Review> sortlistIN = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+
+Lv inLV = Lv(
+    lv_id: 666,
+    name: "VU Interoperabilität",
+    profesor1: "Prof. S. Snape",
+    profesor2: "Prof. F. Flitwick",
+    avgmark: 4.4,
+    r_list: templistIN,
+    sortList: templistIN);
+
+Color favIconColorIN = Colors.red;
+
+// VU Business Intelligence
+List<Review> templistBI = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
+List<Review> sortlistBI = [r10, r9, r8, r11, r7, r6, r5, r2, r4, r3, r1];
+
+Lv biLV = Lv(
+    lv_id: 666,
+    name: "VU Business Intelligence",
+    profesor1: "Prof. S. Snape",
+    profesor2: "Prof. F. Flitwick",
+    avgmark: 4.4,
+    r_list: templistBI,
+    sortList: templistBI);
+
+Color favIconColorBI = Colors.red;

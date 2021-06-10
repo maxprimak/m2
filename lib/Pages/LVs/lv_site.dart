@@ -15,7 +15,7 @@ class _Lv_profileState extends State<Lv_profile> {
   User usertmp = User(name: "Peter");
 
   // Color _favIconColor = Colors.red;
-  Color _favIconColor = global.favIconColorADS;
+  Color _favIconColor = global.favIconColorADS; //todo make abstract from lv
   int amountofreviews = global.currLV.r_list.length;
 
   @override

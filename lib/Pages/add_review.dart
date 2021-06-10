@@ -186,7 +186,7 @@ class _AddReviewState extends State<AddReview> {
             constraints: BoxConstraints(maxWidth: 200),
             child: Text(
               global.currLV.name,
-              style: TextStyle(fontSize: 20, fontFamily: 'Rubik'),
+              style: TextStyle(fontSize: 20, fontFamily: 'Rubik', fontWeight: FontWeight.bold),
             ),
           ),
           Icon(

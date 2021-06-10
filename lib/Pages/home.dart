@@ -67,6 +67,7 @@ class _HomeState extends State<Home> {
                   ),
                   RaisedButton(
                     onPressed: () {
+                      global.currLV = global.adsLV;
                       Navigator.push(context,
                           MaterialPageRoute(builder: (_) => Lv_profile()));
                     },
@@ -118,6 +119,7 @@ class _HomeState extends State<Home> {
                   ),
                   RaisedButton(
                     onPressed: () {
+                      global.currLV = global.dbLV;
                       Navigator.push(context,
                           MaterialPageRoute(builder: (_) => Lv_profile()));
                     },
@@ -169,6 +171,7 @@ class _HomeState extends State<Home> {
                   ),
                   RaisedButton(
                     onPressed: () {
+                      global.currLV = global.prLV;
                       Navigator.push(context,
                           MaterialPageRoute(builder: (_) => Lv_profile()));
                     },
@@ -220,6 +223,7 @@ class _HomeState extends State<Home> {
                   ),
                   RaisedButton(
                     onPressed: () {
+                      global.currLV = global.inLV;
                       Navigator.push(context,
                           MaterialPageRoute(builder: (_) => Lv_profile()));
                     },
@@ -271,6 +275,7 @@ class _HomeState extends State<Home> {
                   ),
                   RaisedButton(
                     onPressed: () {
+                      global.currLV = global.biLV;
                       Navigator.push(context,
                           MaterialPageRoute(builder: (_) => Lv_profile()));
                     },
