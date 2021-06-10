@@ -191,7 +191,7 @@ class _AddReviewState extends State<AddReview> {
           ),
           Icon(
             Icons.favorite,
-            color: global.favIconColorADS,
+            color: global.currLV.liked,
           )
         ],
       ),

@@ -115,9 +115,11 @@ Lv adsLV = Lv(
     profesor2: "Prof. M. McGonagallov",
     avgmark: 4.3,
     r_list: templistAds,
-    sortList: sortlistAds);
+    sortList: sortlistAds,
+    liked: favIconColorAD
+);
 
-Color favIconColorADS = Colors.red;
+Color favIconColorAD = Colors.red;
 
 // Datenbank
 List<Review> templistDB = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
@@ -130,7 +132,9 @@ Lv dbLV = Lv(
     profesor2: "Prof. M. McGonagallov",
     avgmark: 3.8,
     r_list: templistDB,
-    sortList: sortlistDB);
+    sortList: sortlistDB,
+    liked: favIconColorDBS
+);
 
 Color favIconColorDBS = Colors.red;
 
@@ -145,9 +149,11 @@ Lv prLV = Lv(
     profesor2: "Prof. S. Snape",
     avgmark: 3.9,
     r_list: templistPR,
-    sortList: templistPR);
+    sortList: templistPR,
+    liked: favIconColorPR
+);
 
-Color favIconColorPR = Colors.red;
+Color favIconColorPR = Colors.grey;
 
 // Interoperabilität
 List<Review> templistIN = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
@@ -160,9 +166,11 @@ Lv inLV = Lv(
     profesor2: "Prof. F. Flitwick",
     avgmark: 4.4,
     r_list: templistIN,
-    sortList: templistIN);
+    sortList: templistIN,
+    liked: favIconColorIN
+);
 
-Color favIconColorIN = Colors.red;
+Color favIconColorIN = Colors.grey;
 
 // VU Business Intelligence
 List<Review> templistBI = [r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1];
@@ -175,6 +183,8 @@ Lv biLV = Lv(
     profesor2: "Prof. F. Flitwick",
     avgmark: 4.4,
     r_list: templistBI,
-    sortList: templistBI);
+    sortList: templistBI,
+    liked: favIconColorBI
+);
 
-Color favIconColorBI = Colors.red;
+Color favIconColorBI = Colors.grey;

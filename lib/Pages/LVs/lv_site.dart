@@ -15,7 +15,7 @@ class _Lv_profileState extends State<Lv_profile> {
   User usertmp = User(name: "Peter");
 
   // Color _favIconColor = Colors.red;
-  Color _favIconColor = global.favIconColorADS; //todo make abstract from lv
+  Color _favIconColor = global.currLV.liked;
   int amountofreviews = global.currLV.r_list.length;
 
   @override
@@ -62,18 +62,10 @@ class _Lv_profileState extends State<Lv_profile> {
                 style: TextStyle(fontSize: 20, fontFamily: 'Rubik', fontWeight: FontWeight.bold),
               ),
             ),
-            IconButton(
-                icon: Icon(Icons.favorite),
-                color: _favIconColor,
-                onPressed: () {
-                  setState(() {
-                    if (_favIconColor == Colors.grey) {
-                      _favIconColor = Colors.red;
-                    } else {
-                      _favIconColor = Colors.grey;
-                    }
-                  });
-                })
+            Icon(
+              Icons.favorite,
+              color: global.currLV.liked,
+            )
           ],
         ),
       ),

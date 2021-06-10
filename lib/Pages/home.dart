@@ -11,11 +11,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // Color _favIconColorADS = Colors.red;
-  Color _favIconColorDB = Colors.grey;
-  Color _favIconColorPR1 = Colors.grey;
-  Color _favIconColorIn = Colors.grey;
-  Color _favIconColorBus = Colors.grey;
 
   int _currentIndex = 0;
 
@@ -99,13 +94,13 @@ class _HomeState extends State<Home> {
                             ),
                             IconButton(
                                 icon: Icon(Icons.favorite),
-                                color: global.favIconColorADS,
+                                color: global.adsLV.liked,
                                 onPressed: () {
                                   setState(() {
-                                    if (global.favIconColorADS == Colors.grey) {
-                                      global.favIconColorADS = Colors.red;
+                                    if (global.adsLV.liked == Colors.grey) {
+                                      global.adsLV.liked = Colors.red;
                                     } else {
-                                      global.favIconColorADS = Colors.grey;
+                                      global.adsLV.liked = Colors.grey;
                                     }
                                   });
                                 })
@@ -151,13 +146,13 @@ class _HomeState extends State<Home> {
                             ),
                             IconButton(
                                 icon: Icon(Icons.favorite),
-                                color: _favIconColorDB,
+                                color: global.dbLV.liked,
                                 onPressed: () {
                                   setState(() {
-                                    if (_favIconColorDB == Colors.grey) {
-                                      _favIconColorDB = Colors.red;
+                                    if (global.dbLV.liked == Colors.grey) {
+                                      global.dbLV.liked = Colors.red;
                                     } else {
-                                      _favIconColorDB = Colors.grey;
+                                      global.dbLV.liked = Colors.grey;
                                     }
                                   });
                                 })
@@ -203,13 +198,13 @@ class _HomeState extends State<Home> {
                             ),
                             IconButton(
                                 icon: Icon(Icons.favorite),
-                                color: _favIconColorPR1,
+                                color: global.prLV.liked,
                                 onPressed: () {
                                   setState(() {
-                                    if (_favIconColorPR1 == Colors.grey) {
-                                      _favIconColorPR1 = Colors.red;
+                                    if (global.prLV.liked == Colors.grey) {
+                                      global.prLV.liked = Colors.red;
                                     } else {
-                                      _favIconColorPR1 = Colors.grey;
+                                      global.prLV.liked = Colors.grey;
                                     }
                                   });
                                 })
@@ -255,13 +250,13 @@ class _HomeState extends State<Home> {
                             ),
                             IconButton(
                                 icon: Icon(Icons.favorite),
-                                color: _favIconColorIn,
+                                color: global.inLV.liked,
                                 onPressed: () {
                                   setState(() {
-                                    if (_favIconColorIn == Colors.grey) {
-                                      _favIconColorIn = Colors.red;
+                                    if (global.inLV.liked == Colors.grey) {
+                                      global.inLV.liked = Colors.red;
                                     } else {
-                                      _favIconColorIn = Colors.grey;
+                                      global.inLV.liked = Colors.grey;
                                     }
                                   });
                                 })
@@ -307,13 +302,13 @@ class _HomeState extends State<Home> {
                             ),
                             IconButton(
                                 icon: Icon(Icons.favorite),
-                                color: _favIconColorBus,
+                                color: global.biLV.liked,
                                 onPressed: () {
                                   setState(() {
-                                    if (_favIconColorBus == Colors.grey) {
-                                      _favIconColorBus = Colors.red;
+                                    if (global.biLV.liked == Colors.grey) {
+                                      global.biLV.liked = Colors.red;
                                     } else {
-                                      _favIconColorBus = Colors.grey;
+                                      global.biLV.liked = Colors.grey;
                                     }
                                   });
                                 })

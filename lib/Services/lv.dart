@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'review.dart';
 
 class Lv {
@@ -12,8 +14,9 @@ class Lv {
   int numberTeachReview = 10;
   List<Review> r_list;
   List<Review> sortList;
+  Color liked;
 
-  Lv({this.lv_id, this.name, this.profesor1, this.profesor2, this.avgmark, this.r_list, this.sortList});
+  Lv({this.lv_id, this.name, this.profesor1, this.profesor2, this.avgmark, this.r_list, this.sortList, this.liked});
 }
 
 Lv resultcalculate(Lv tmp) {

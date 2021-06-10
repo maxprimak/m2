@@ -15,7 +15,7 @@ class _TeacherPage extends State<TeacherPage> {
   User usertmp = User(name: "Peter");
 
   // Color _favIconColor = Colors.red;
-  Color _favIconColor = global.favIconColorADS;
+  Color _favIconColor = global.currLV.liked;
   int amountofreviews = global.currLV.r_list.length;
 
   @override
